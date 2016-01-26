@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<title> wendychendy </title>
+		<script src="../js/script.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300italic|Lato:900,700,300,400|Covered+By+Your+Grace|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../css/desktop/style.css" media="only screen and (min-device-width: 480px)">
+	<!-- 	<link rel="stylesheet" type="text/css" href="../css/mobile/mstyleSplash.css" media="only screen and (max-device-width: 480px)"> -->
+	</head>
+	<body onload="randomColor();hideAllHeaders()" id="body">
+
+		<div id="container">
+
+			<div id="main">
+
+				<div id="splash">
+					<img src="../files/icons/piggy_white.svg" alt="piggy" style="width: 200px">
+					<div id="splashName">WENDY CHEN</div>
+					<div id="splashTagLine">PICTURES & CODE</div>
+				</div>
+
+				<div id="navbar">
+
+
+					<div id="header01" class="header" onclick="selectNavHeader(ABOUT.id);underlineSelection(this.id)">ABOUT</div>
+					<div class="bullet">
+						<img src="../files/icons/heart.svg" alt="heart bullet">
+					</div>
+					<div id="header02" class="header" onclick="selectNavHeader(WORK.id);underlineSelection(this.id);showWorkSplash()">WORK</div>
+					<div id="homePigBullet" class="bullet" onclick="selectSplashPage()">
+						<img id="piggy" src="../files/icons/heart.svg" alt="heart bullet">
+					</div>
+					<div id="header03" class="header" onclick="selectNavHeader(RESUME.id);underlineSelection(this.id)">RESUME</div>
+					<div class="bullet">
+						<img src="../files/icons/heart.svg" alt="heart bullet">
+					</div>
+					<div id="header04" class="header" onclick="selectNavHeader(CONTACT.id);underlineSelection(this.id)">CONTACT</div>
+				</div>
+
+				
+
+				<div id="ABOUT">
+					<div id="about_left">
+						<div id="about_header">
+							<div id="about_header_text">
+								HELLO! (OINK)
+							</div>
+						</div>
+						<div id="about_text">
+							Hi, my name is Wendy. I love art. I love coding. I am passionate about how computer science and visual art can be combined, because at their core, they are both about creation and problem solving.<br><br>
+							I am pursuing a B.S. in Computer Science at Yale University, and I previously worked as an Art & Pro- duction Intern at Walt Disney Animation Studios.<br><br>
+							I love a challenge, I love animated movies, and I love sunny and beautiful southern California, my home.<br><br>
+							Currently, I want to pursue studies in computer graphics. I want to shape the world we see because so much of our experience is rooted in vision, and by shaping what we see, I can all the more shape what we imagine, think, and feel.
+						</div>
+					</div>
+					<div id="about_right">
+						<img id="about_pic_piggy" src="../files/images/about_piggy_cropped.jpg" alt="piggy" onclick="swapMe()">
+					</div>
+				</div>
+
+				<div id="WORK">
+					<div id="work_splash">
+						<div id="work_animation" onclick="toggleWork(this.id)">
+							<div class="work_splash_text">
+								ANIMATION
+							</div>
+						</div>
+						<div id="work_code" onclick="toggleWork(this.id)">
+							<div class="work_splash_text">
+								CODE
+							</div>
+						</div>
+						<div id="work_painting" onclick="toggleWork(this.id)">
+							<div class="work_splash_text">
+								PAINTING
+							</div>
+						</div>
+						<div id="work_design" onclick="toggleWork(this.id)">
+							<div class="work_splash_text">
+								DESIGN
+							</div>
+						</div>
+						<div id="work_photography" onclick="toggleWork(this.id)">
+							<div class="work_splash_text">
+								PHOTOGRAPHY
+							</div>
+						</div>
+					</div>
+
+					<div id="work_animation_div" class="work_div">
+						<div id="animation_navbar" class="work_navbar">
+							<div id="animation_title" class="title">ANIMATION</div>
+							<div class="space"></div>
+							<div id="animation01" class="project">where i'll go</div><div class="space"></div>
+							<div id="animation02" class="project">revised scenes (where i'll go)</div><div class="space"></div>
+							<div id="animation03" class="project">selected stills (where i'll go)</div><div class="space"></div>
+							<div id="animation04" class="project">disney</div>
+						</div>
+						<div id="animation_gallery" class="work_gallery">
+							<div id="left_arrow">
+								arrow
+							</div>
+							<div>
+								<div id="animation01_gallery">
+									gallery 1
+								</div>
+								<div id="animation02_gallery">
+									gallery 2
+								</div>
+								<div id="animation03_gallery">
+									gallery 3
+								</div>
+								<div id="animation04_gallery">
+									gallery 4
+								</div>
+							</div>
+							<div id="right_arrow">
+								arrow
+							</div>
+						</div>
+						<div id="animation_description" class="work_description">
+							<div id="animation01_description">
+								description 1
+							</div>
+							<div id="animation02_description">
+								description 2
+							</div>
+							<div id="animation03_description">
+								description 3
+							</div>
+							<div id="animation04_description">
+								description 4
+							</div>
+						</div>
+					</div>
+
+					<div id="work_code_div" class="work_div">
+						<div id="code_navbar" class="work_navbar">
+							<div id="code_title" class="title">CODE</div>
+							<div class="space"></div>
+							<div id="code01" class="project">raytracer</div><div class="space"></div>
+							<div id="code02" class="project">portfolio site</div><div class="space"></div>
+							<div id="code03" class="project">typesketch</div><div class="space"></div>
+						</div>
+						<div id="code_gallery" class="work_gallery">
+							<div id="left_arrow">
+								arrow
+							</div>
+							<div>
+								<div id="code01_gallery">
+									gallery 1
+								</div>
+								<div id="code02_gallery">
+									gallery 2
+								</div>
+								<div id="code03_gallery">
+									gallery 3
+								</div>
+							</div>
+							<div id="right_arrow">
+								arrow
+							</div>
+						</div>
+						<div id="code_description" class="work_description">
+							<div id="code01_description">
+								description 1
+							</div>
+							<div id="code02_description">
+								description 2
+							</div>
+							<div id="code03_description">
+								description 3
+							</div>
+						</div>
+					</div>
+
+					<div id="work_painting_div" class="work_div">
+						<div id="painting_navbar" class="work_navbar">
+							<div id="painting_title" class="title">PAINTING</div>
+							<div class="space"></div>
+							<div id="painting01" class="project">assorted portraits</div><div class="space"></div>
+							<div id="painting02" class="project">fantasy landscapes</div><div class="space"></div>
+						</div>
+						<div id="painting_gallery" class="work_gallery">
+							<div id="left_arrow">
+								arrow
+							</div>
+							<div>
+								<div id="painting01_gallery">
+									gallery 1
+								</div>
+								<div id="painting02_gallery">
+									gallery 2
+								</div>
+							</div>
+							<div id="right_arrow">
+								arrow
+							</div>
+						</div>
+						<div id="painting_description" class="work_description">
+							<div id="painting01_description">
+								description 1
+							</div>
+							<div id="painting02_description">
+								description 2
+							</div>
+						</div>
+					</div>
+
+					<div id="work_design_div" class="work_div">
+						<div id="design_navbar" class="work_navbar">
+							<div id="design_title" class="title">DESIGN</div>
+							<div class="space"></div>
+							<div id="design01" class="project">assorted posters</div><div class="space"></div>
+							<div id="design02" class="project">copybot</div><div class="space"></div>
+						</div>
+						<div id="design_gallery" class="work_gallery">
+							<div id="left_arrow">
+								arrow
+							</div>
+							<div>
+								<div id="design01_gallery">
+									gallery 1
+								</div>
+								<div id="design02_gallery">
+									gallery 2
+								</div>
+							</div>
+							<div id="right_arrow">
+								arrow
+							</div>
+						</div>
+						<div id="design_description" class="work_description">
+							<div id="design01_description">
+								description 1
+							</div>
+							<div id="design02_description">
+								description 2
+							</div>
+						</div>
+					</div>
+
+					<div id="work_photography_div" class="work_div">
+						<div id="photography_navbar" class="work_navbar">
+							<div id="photography_title" class="title">PHOTOGRAPHY</div>
+							<div class="space"></div>
+							<div id="photography01" class="project">assorted photographs</div><div class="space"></div>
+						</div>
+						<div id="photography_gallery" class="work_gallery">
+							<div id="left_arrow">
+								arrow
+							</div>
+							<div>
+								<div id="photography01_gallery">
+									gallery 1
+								</div>
+							</div>
+							<div id="right_arrow">
+								arrow
+							</div>
+						</div>
+						<div id="photography_description" class="work_description">
+							<div id="photography01_description">
+								description 1
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="RESUME">This is the 'resume' div.
+				</div>
+
+				<div id="CONTACT">
+					<div id="contact_left">
+						<div id="address_card">
+							<div id="name"> WENDY CHEN <br> ARTIST//PROGRAMMER<br>
+							</div>
+							<div id="school_address_bar">
+								<div id="school_header">
+									SCHOOL ADDRESS
+								</div>
+								<div id="school_address">
+									206 Elm St, Unit 201656 <br> New Haven, CT 06520
+								</div>
+							</div>
+							<div id="home_address_bar">
+								<div id="home_header">
+									HOME ADDRESS
+								</div>
+								<div id="home_address">
+									23301 Park Colombo <br> Calabasas, CA 91302
+								</div>
+							</div>
+						</div>
+						<div id="mail_card">
+							<div id="phone_bar">
+								<div id="phone_header">
+									PHONE
+								</div>
+								<div id="phone">
+									(818) 519 - 1573
+								</div>
+							</div>
+							<div id="email_bar">
+								<div id="email_header">
+									E-MAIL
+								</div>
+								<div id="email">
+									wendy.w.chen@yale.edu
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="contact_right">
+						<img src="../files/icons/piggy_birthday.svg">
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+
+	<body>
+</html>
+
+

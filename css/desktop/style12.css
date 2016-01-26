@@ -1,0 +1,999 @@
+/*///////////////////////RESOURCES///////////////////////////////*/
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
+
+/*///////////////////////////////////////////////////////////////*/
+body{
+	position: relative;
+	width:100%;
+	height: 100%;
+	min-height: 500px;
+	min-width: 700px;
+	/*border: 3px solid #990033;*/
+
+}
+
+div{
+	/*border: 3px solid #33cc33;*/
+}
+
+
+/*justify-content for main axis*/
+/*align-items for cross axis*/
+div#container{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    -webkit-align-items: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:100%;	
+}
+
+
+/*change justify-content to flex-start on nav bar toggle*/
+div#main{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: flex-end;
+    -webkit-align-items: center;
+
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	/*justify-content: flex-start; */
+	align-items:center;
+	height:100%;
+	width: 70%;
+	min-width: 400px;
+
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+
+}
+
+div#navbar{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: space-between;
+    -webkit-align-items:center;
+
+	display:flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	height: 10%;
+	max-height: 300px;
+
+	-webkit-transition: height 0.5s, opacity 0.5s;
+	transition: height 0.5s, opacity 0.5s; 
+
+
+}
+
+div.bullet{
+	width: 50px;
+}
+
+div#homePigBullet{
+	width: 50px;
+	opacity:1;
+
+	-webkit-transition: width 0.5s, opacity 0.5s;
+	transition: width 0.5s, opacity 0.5s; 
+}
+
+div#splash{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-items: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+}
+
+div#splashName{
+	font-family: "Lato", "Verdana";
+	font-weight: 900;
+	font-size: 140%;
+	color: rgb(255,255,255);
+
+	width:100%;
+	text-align: center;
+}
+
+div#splashTagLine{
+	font-family: "Sue Ellen Francisco", "Verdana";
+	font-size: 150%;
+	color: rgb(255,255,255);
+
+	width:100%;
+	text-align: center;
+}
+
+div.header{
+	font-family: "Lato", "Verdana";
+	font-weight: 400;
+	font-size: 100%;
+	color: rgb(255,255,255);
+	cursor: pointer;
+
+	align-self:center;
+}
+
+
+/*//////////////animated background/////////*/
+@keyframes animatedBackground{
+	from{background-position: 0px 0px;}
+	to{background-position: 825px 0px;}
+}
+
+#body{
+	background-image: url("../../files/backgrounds/bg1.svg");
+	background-position: 0 0px;
+	background-repeat: repeat;
+
+	animation: animatedBackground 40s linear infinite;
+
+	  -webkit-transition: opacity 1s ease-in-out;
+	  -moz-transition: opacity 1s ease-in-out;
+	  -o-transition: opacity 1s ease-in-out;
+	  transition: opacity 1s ease-in-out;
+
+}
+
+
+
+/*/////////////ALL style////////////////*/
+div#ABOUT,div#WORK,div#RESUME,div#CONTACT{
+	display: -webkit-flex; /* Safari */
+
+	display:flex;
+	width:100%;
+	height:90%;
+	opacity:0; 
+
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s; 
+}
+
+
+/*/////////////ABOUT style////////////////*/
+div#ABOUT{
+	/*border: 3px solid #990033;*/
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}
+
+div#about_left{
+	/*margin:10px 20px 10px 0px;*/
+	margin: 10% 3% 2% 0%;
+	width:50%;
+	/*height: 50%;*/
+	/*border: 3px solid #3333ff;*/
+}
+
+div#about_header{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-self: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	font-family: "Lato", "Verdana";
+	font-weight: 700;
+	/*font-size: 250%;*/
+	font-size:4vw;
+	text-align: center;
+	color: rgb(255,255,255);
+	/*margin: 10px;*/
+
+
+	height: 15%;
+	border: 4px solid white;
+
+	align-self:center;
+}
+
+div#about_text{
+	font-family: "Lato", "Verdana";
+	font-weight: 300;
+	/*font-size: 100%;*/
+	font-size: 1.2vw;
+	text-align: justify;
+	color: rgb(255,255,255);
+
+	margin-top: 4%;
+
+	width:100%;
+	height: 70%;
+}
+
+div#about_right{
+	/*margin:10px 0px 10px 20px;*/
+	margin: 10% 0% 2% 3%;
+	width:50%;
+	/*border: 3px solid #ff99ff;*/
+}
+
+img#about_pic_piggy{
+	width:100%;
+
+	-webkit-transition: 2s -webkit-filter linear;
+	transition: 2s filter linear; 
+}
+
+
+img#about_pic_piggy:hover{
+	-webkit-filter: grayscale(80%);
+	filter: grayscale(80%);
+	-webkit-filter: saturate(40%);
+	filter: saturate(40%);
+	cursor:pointer;
+
+}
+
+/*///////////////////WORK Dropdown menu ////////*/
+div#work_dropdown{
+	background: rgb(255,255,255);
+	background: rgba(255,255,255,0.3);
+	display:none;
+
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+
+	position:absolute;
+	z-index:2;
+
+	/*border: 3px solid #990033;*/
+}
+
+/*div#header02:hover #work_dropdown{
+	display:block;
+	opacity: 1;
+}
+*/
+
+div#header02:hover .showDrop{
+	display:block;
+	opacity: 1;
+
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+}
+
+div#header02:hover .hideDrop{
+	display:none;
+	opacity: 0;
+
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+}
+
+
+
+
+
+/*////////////WORK style///////////////////*/
+div#WORK{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+    -webkit-align-self: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+	/*justify-content:center;*/
+	justify-content:flex-start;
+	height:90%;
+	width:100%;
+
+	align-self: flex-start;
+
+	position:relative;
+	z-index:1;
+
+	/*border: 4px solid pink;*/
+}
+
+div#work_splash{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	margin-top:10%; /*originally 10%, play with later*/
+	/*margin-bottom: 2%;*/
+	height: 80%;
+
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+}
+
+div#work_animation,#work_code,
+#work_painting,#work_design,#work_photography{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+
+	width: 20%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+
+	outline: 4px solid white;
+	outline-offset: -10px;
+
+	-webkit-filter: brightness(80%);
+	filter: brightness(80%);
+
+	opacity: 1;
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s; 
+}
+
+div#work_animation:hover,#work_code:hover,
+#work_painting:hover,#work_design:hover,#work_photography:hover{
+	cursor:pointer;
+
+	-webkit-filter: brightness(100%);
+	filter: brightness(100%);
+}
+
+div#work_animation{
+	background-image: url("../../files/workSplash/animation_cropped.jpg");
+	background-size: cover;
+}
+
+div#work_code{
+	background-image: url("../../files/workSplash/code_cropped.jpg");
+	background-size: cover;
+}
+
+div#work_painting{
+	background-image: url("../../files/workSplash/painting_cropped.jpg");
+	background-size: cover;
+}
+
+div#work_design{
+	background-image: url("../../files/workSplash/design_cropped.jpg");
+	background-size: cover;
+}
+
+div#work_photography{
+	background-image: url("../../files/workSplash/photography_cropped.jpg");
+	background-size: cover;
+}
+
+div.work_splash_text{
+	font-family: "Lato", "Verdana";
+	font-weight: 700;
+	font-size: 1.2vw;
+	color: rgb(255,255,255);
+	text-align: center;
+
+	vertical-align: middle;
+}
+
+
+div#work_animation_div,#work_code_div,#work_painting_div,#work_design_div,#work_photography_div{
+	display:none;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s, margin-top 0.5s;
+	transition: opacity 0.5s, margin-top 0.5s; 
+}
+
+/*///////////WORK div specific////////////*/
+div.work_div{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+/*	justify-content:center;
+	align-contents:center;*/
+
+	margin-top:3%;
+}
+
+div.work_navbar{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content: flex-start;
+	/*justify-content:space-between;*/
+}
+
+div.title{
+	font-family: "Lato", "Verdana";
+	font-weight: 700;
+	font-size: 2.5vw;
+	color: rgb(255,255,255);
+	align-self:flex-end;
+	/*flex-basis: 10%;*/
+
+	-webkit-align-self:flex-end;
+
+}
+
+div.project{
+	font-family: "Lato", "Verdana";
+	font-weight: 300;
+	font-size: 1.25vw;
+	color: rgb(255,255,255);
+	align-self:flex-end;
+	margin-bottom: 5px; /*hack fix for baseline alignment*/
+	cursor: pointer;
+
+	-webkit-align-self: flex-end;
+}
+
+div.space{
+	width: 4%;
+}
+
+div.work_gallery{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	/*justify-content:flex-start;*/
+
+	width: 100%;
+	height: 80%;
+
+	/*border: 4px solid green;*/
+}
+
+div.gallery{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-content: space-between; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-content:space-between;
+
+	width:100%;
+	height:100%;
+
+	/*overflow: scroll;*/
+	overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+	/*border: 4px solid pink;*/
+}
+
+/*http://stackoverflow.com/questions/7492062/css-overflow-scroll-always-show-vertical-scroll-bar*/
+
+div.gallery::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+}
+div.gallery::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+div.video_gallery{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-content: space-between; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-content:space-between;
+
+	/*align-items:flex-start;*/
+	align-items:center;
+
+	width:100%;
+	height:100%;
+	/*margin-top: 2%;*/
+
+	/*overflow: scroll;*/
+
+	/*border: 4px solid pink;*/
+}
+
+div.no_preview{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-content: center; /* Safari 6.1+ */
+    -webkit-align-items:center;
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-content:center;
+	align-items:center;
+
+	width:100%;
+	height:95%;
+	margin-top: 5%;
+
+	/*border: 4px solid pink;*/
+}
+
+video{
+	width:95%;
+	height:;
+}
+
+div.image_gallery{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+    -webkit-align-content: space-between; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-content:space-between;
+
+	width:100%;
+	height:95%;
+
+	margin-top:5%;
+
+	/*overflow: scroll;*/
+
+	/*border: 4px solid pink;*/
+}
+
+div.imageBuffer{
+	display:block;
+	height:85%;
+	align-self:flex-start;
+	/*border: 4px solid pink;*/
+}
+
+img.projectImage{
+    height:100%;
+}
+
+img.projectImage:hover{
+    cursor: pointer;
+}
+
+
+div.imagePad{
+	width:20px;
+	height:10px;
+	/*border: 4px solid lightgreen;*/
+}
+
+div.work_description{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content: flex-start;
+
+	width:100%;
+
+	font-family: "Lato", "Verdana";
+	font-weight: 300;
+	font-size: 1vw;
+	color: rgb(255,255,255);
+
+	/*border: 4px solid pink;*/
+}
+
+
+
+/*/////////////RESUME style///////////////*/
+div#RESUME{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+    -webkit-align-self: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+	/*justify-content:center;*/
+	justify-content:flex-start;
+	height:85%;
+	width:100%;
+
+	align-self: flex-start;
+
+	position:relative;
+	z-index:1;
+
+	/*border: 4px solid pink;*/
+}
+
+div#resume_navbar{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content: flex-start;
+	align-items: center;
+
+	margin-top: 3%;
+
+	width:100%;
+	height:10%;
+}
+
+div#resume_navbar a:link, a:visited, a:hover, a:active{
+	font-family: "Lato", "Verdana";
+	font-weight: 700;
+	font-size: 1.5vw;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	cursor:pointer;
+}
+
+div#resume_main{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	width: 100%;
+	height: 90%;
+
+	overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+div#resume_main::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+}
+div#resume_main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+div.resume_box{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content: flex-start;
+
+	border: 4px solid white;
+	width: 96%;
+	margin-bottom: 2%;
+}
+
+div.resume_image{
+	align-self:center;
+	-webkit-align-self:center;
+	width:30%;
+	margin-left: 2%;
+	/*border: 4px solid pink;*/
+}
+
+div.resume_section{
+	/*outline: 4px solid white;*/
+	/*outline-offset: -10px;*/
+	/*width:100%;*/
+	/*height: 100px;*/
+	width: 65%;
+}
+
+div.resume_header{
+	font-family: "Sue Ellen Francisco", "Verdana";
+	font-weight: 700;
+	font-size: 3vw;
+	color: rgb(255,255,255);
+	margin: 2%;
+
+}
+
+div.resume_item{
+	width: 100%;
+	margin: 2%;
+}
+
+div.resume_item_title{
+	font-family: "Lato", "Verdana";
+	font-weight: 700;
+	font-size: 1.5vw;
+	color: rgb(255,255,255);
+}
+
+div.resume_item_description{
+	font-family: "Lato", "Verdana";
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.5vw;
+	color: rgb(255,255,255);
+}
+
+/*//////////CONTACT style/////////////////*/
+div#CONTACT{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	width: 100%;
+	height:80%;
+
+	margin: 3%;
+
+	/*border: 4px solid pink;*/
+}
+
+div#contact_left{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+
+	height: 100%;
+	width:60%;
+	/*border: 4px solid pink;*/
+}
+
+div#address_card{
+	border: 4px solid white;
+	margin: 10% 3% 2% 0%;
+	height: 50%;
+	padding: 4%;
+
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+}
+
+div#school_address_bar,div#home_address_bar,div#phone_bar,div#email_bar{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+
+	/*border: 4px solid pink;*/
+}
+
+div#mail_card{
+	border: 4px solid white;
+	margin: 3% 3% 2% 0%;	
+	height:30%;
+	padding: 4%;
+
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+div#address_card,#mail_card{
+	font-family: "Lato", "Verdana";
+	font-weight: 700;
+	font-size: 1.5vw;
+	color: rgb(255,255,255);
+}
+
+div#school_address,#home_address,#phone,#email{
+	font-weight: 300;
+	font-size: 1.5vw;
+	align-self:flex-start;
+	/*border: 4px solid pink;*/
+	width: 50%;
+}
+
+
+div#contact_right{
+	height:80%;
+	width:40%;
+	align-self:center;
+	-webkit-align-self:center;
+	/*border: 4px solid pink;*/
+}
+
+
+/*//////////LIGHT BOX////////////////////////////*/
+
+div#lightbox{
+	/*display: -webkit-flex; /* Safari */*/
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    -webkit-align-items: center; /* Safari 6.1+ */
+
+
+	display:none;
+	opacity:0;
+	/*display:flex;*/
+	flex-direction:column;
+	justify-content: space-around;
+	align-items:center;
+	/*background-color: rgba(255,255,255,0.5);*/
+
+	height: 100%;
+	width:100%;
+	/*border: 4px solid pink;*/
+
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s; 
+}
+
+div#lightbox_exit_section{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: flex-end; /* Safari 6.1+ */
+    -webkit-align-items: center; /* Safari 6.1+ */
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+	height: 10%;
+	width: 80%;
+	/*border: 4px solid pink;*/
+}
+
+div#exit{
+	width: 4%;
+}
+
+img#exit_icon:hover{
+	cursor:pointer;
+}
+
+div#lightbox_section{
+	height: 80%;
+	width: 80%;
+	/*border: 4px solid pink;*/
+}
+
+div.lightbox_gallery{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+div.imageCaptionPair{
+	height:100%;
+	width:100%;
+}
+
+div.lightbox_image_div{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-content: center; /* Safari 6.1+ */
+    -webkit-align-items:center;
+
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+
+	height: 85%;
+	width:100%;
+}
+
+img.lightbox_image{
+	height:100%;
+}
+
+div.caption{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    -webkit-align-items:center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+
+	height:10%;
+	width: 100%;
+
+	font-family: "Lato", "Verdana";
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1vw;
+	color: rgb(255,255,255);
+
+	/*border: 4px solid pink;*/
+}
+
+div#lightbox_nav_section{
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row; /* Safari 6.1+ */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    -webkit-align-items: center; /* Safari 6.1+ */
+
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	height:10%;
+	width: 80%;
+
+	font-family: "Lato", "Verdana";
+	font-weight: 300;
+	font-size: 1.5vw;
+	color: rgb(255,255,255);
+
+	/*border: 4px solid pink;*/
+}
+
+
+div.arrow{
+	width: 7%;
+}
+
+
+
+
+
+
+
+
