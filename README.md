@@ -1,4 +1,4 @@
 # wendychendy
 new portfolio site 
 
-first launch
+first launch: http://vverovvero.github.io/wendychendy/
