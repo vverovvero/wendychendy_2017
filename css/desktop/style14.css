@@ -1,6 +1,6 @@
 /*///////////////////////RESOURCES///////////////////////////////*/
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
-/*http://smallenvelop.com/display-loading-icon-page-loads-completely/*/
+
 
 /*///////////////////////////////////////////////////////////////*/
 body{
@@ -139,20 +139,11 @@ div.header{
 	to{background-position: 825px 0px;}
 }
 
-@-webkit-keyframes animatedBackground{
-	from{background-position: 0px 0px;}
-	to{background-position: 825px 0px;}
-}
-
 #body{
-	/*background-image: url("../../files/backgrounds/icons_colored_bg.svg");*/
+	/*background-image: url("../../files/backgrounds/bg1.svg");*/
 	background-position: 0 0px;
 	background-repeat: repeat;
 
-
-	 -webkit-animation: animatedBackground 40s linear infinite;
-     -moz-animation: animatedBackground 40s linear infinite;
-     -o-animation: animatedBackground 40s linear infinite;
 	animation: animatedBackground 40s linear infinite;
 	/*animation:none;*/
 
@@ -163,10 +154,6 @@ div.header{
 
 
 	  transform: translateZ(0);
-	  -webkit-transform: translateZ(0);
-	  ms-transform: translateZ(0);
-	  /*transform: translate3d(0,0,0);*/
-		/*-webkit-transform: translate3d(0,0,0);*/
 }
 
 
