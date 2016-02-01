@@ -166,6 +166,11 @@ div.header{
 	  transform: translateZ(0);
 	  -webkit-transform: translateZ(0);
 	  ms-transform: translateZ(0);
+	  translateZ(0);
+	  -webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	backface-visibility: hidden;
+	perspective: 1000;
 	  /*transform: translate3d(0,0,0);*/
 		/*-webkit-transform: translate3d(0,0,0);*/
 }
@@ -424,26 +429,23 @@ div#work_animation_div,#work_code_div,#work_painting_div,#work_design_div,#work_
 
 /*///////////WORK div specific////////////*/
 div.work_div{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: column; /* Safari 6.1+ */
+	display: -webkit-flex; 
+    -webkit-flex-direction: column; 
 
 	display:flex;
 	flex-direction:column;
-/*	justify-content:center;
-	align-contents:center;*/
 
 	margin-top:3%;
 }
 
 div.work_navbar{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+	display: -webkit-flex;
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: flex-start; 
 
 	display:flex;
 	flex-direction:row;
 	justify-content: flex-start;
-	/*justify-content:space-between;*/
 }
 
 div.title{
@@ -452,7 +454,6 @@ div.title{
 	font-size: 2.5vw;
 	color: rgb(255,255,255);
 	align-self:flex-end;
-	/*flex-basis: 10%;*/
 
 	-webkit-align-self:flex-end;
 
@@ -464,7 +465,7 @@ div.project{
 	font-size: 1.25vw;
 	color: rgb(255,255,255);
 	align-self:flex-end;
-	margin-bottom: 5px; /*hack fix for baseline alignment*/
+	margin-bottom: 5px; 
 	cursor: pointer;
 
 	-webkit-align-self: flex-end;
@@ -475,26 +476,23 @@ div.space{
 }
 
 div.work_gallery{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: space-between; /* Safari 6.1+ */
+	display: -webkit-flex; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: space-between; 
 
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
-	/*justify-content:flex-start;*/
 
 	width: 100%;
 	height: 80%;
-
-	/*border: 4px solid green;*/
 }
 
 div.gallery{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: center; /* Safari 6.1+ */
-    -webkit-align-content: space-between; /* Safari 6.1+ */
+	display: -webkit-flex; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: center; 
+    -webkit-align-content: space-between; 
 
 	display:flex;
 	flex-direction:row;
@@ -504,12 +502,9 @@ div.gallery{
 	width:100%;
 	height:100%;
 
-	/*overflow: scroll;*/
 	overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-
-	/*border: 4px solid pink;*/
 }
 
 /*http://stackoverflow.com/questions/7492062/css-overflow-scroll-always-show-vertical-scroll-bar*/
@@ -526,33 +521,28 @@ div.gallery::-webkit-scrollbar-thumb {
 }
 
 div.video_gallery{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: center; /* Safari 6.1+ */
-    -webkit-align-content: space-between; /* Safari 6.1+ */
+	display: -webkit-flex; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: center; 
+    -webkit-align-content: space-between; 
 
 	display:flex;
 	flex-direction:row;
 	justify-content:center;
 	align-content:space-between;
 
-	/*align-items:flex-start;*/
 	align-items:center;
 
 	width:100%;
 	height:100%;
-	/*margin-top: 2%;*/
-
-	/*overflow: scroll;*/
-
-	/*border: 4px solid pink;*/
+	/*min-height: 475px;*/
 }
 
 div.no_preview{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: center; /* Safari 6.1+ */
-    -webkit-align-content: center; /* Safari 6.1+ */
+	display: -webkit-flex; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: center; 
+    -webkit-align-content: center; 
     -webkit-align-items:center;
 
 	display:flex;
@@ -564,8 +554,6 @@ div.no_preview{
 	width:100%;
 	height:95%;
 	margin-top: 5%;
-
-	/*border: 4px solid pink;*/
 }
 
 video{
@@ -574,11 +562,10 @@ video{
 }
 
 div.image_gallery{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: flex-start; /* Safari 6.1+ */
-    -webkit-align-content: space-between; /* Safari 6.1+ */
-
+	display: -webkit-flex; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: flex-start; 
+    -webkit-align-content: space-between; 
 	display:flex;
 	flex-direction:row;
 	justify-content:flex-start;
@@ -588,21 +575,19 @@ div.image_gallery{
 	height:95%;
 
 	margin-top:5%;
-
-	/*overflow: scroll;*/
-
-	/*border: 4px solid pink;*/
 }
 
 div.imageBuffer{
 	display:block;
 	height:85%;
 	align-self:flex-start;
-	/*border: 4px solid pink;*/
 }
 
 img.projectImage{
     height:100%;
+    /*width:200px;*/
+    /*min-width:200px;*/
+    /*height:auto;*/
 }
 
 img.projectImage:hover{
@@ -613,13 +598,12 @@ img.projectImage:hover{
 div.imagePad{
 	width:20px;
 	height:10px;
-	/*border: 4px solid lightgreen;*/
 }
 
 div.work_description{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+	display: -webkit-flex; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: flex-start; 
 
 	display:flex;
 	flex-direction:row;
@@ -631,8 +615,6 @@ div.work_description{
 	font-weight: 300;
 	font-size: 1vw;
 	color: rgb(255,255,255);
-
-	/*border: 4px solid pink;*/
 }
 
 
@@ -646,7 +628,6 @@ div#RESUME{
 
 	display:flex;
 	flex-direction:column;
-	/*justify-content:center;*/
 	justify-content:flex-start;
 	height:85%;
 	width:100%;
@@ -655,8 +636,6 @@ div#RESUME{
 
 	position:relative;
 	z-index:1;
-
-	/*border: 4px solid pink;*/
 }
 
 div#resume_navbar{
@@ -685,13 +664,13 @@ div#resume_navbar a:link, a:visited, a:hover, a:active{
 }
 
 div#resume_main{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: column; /* Safari 6.1+ */
-    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+/*	display: -webkit-flex; 
+    -webkit-flex-direction: column; 
+    -webkit-justify-content: flex-start; 
 
 	display:flex;
 	flex-direction:column;
-	justify-content: flex-start;
+	justify-content: flex-start;*/
 	width: 100%;
 	height: 90%;
 
@@ -711,9 +690,9 @@ div#resume_main::-webkit-scrollbar-thumb {
 }
 
 div.resume_box{
-	display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+	display: -webkit-flex;
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: flex-start; 
 
 	display:flex;
 	flex-direction:row;
@@ -725,18 +704,13 @@ div.resume_box{
 }
 
 div.resume_image{
-	align-self:center;
-	-webkit-align-self:center;
+/*	align-self:center;
+	-webkit-align-self:center;*/
 	width:30%;
 	margin-left: 2%;
-	/*border: 4px solid pink;*/
 }
 
 div.resume_section{
-	/*outline: 4px solid white;*/
-	/*outline-offset: -10px;*/
-	/*width:100%;*/
-	/*height: 100px;*/
 	width: 65%;
 }
 
@@ -746,7 +720,6 @@ div.resume_header{
 	font-size: 3vw;
 	color: rgb(255,255,255);
 	margin: 2%;
-
 }
 
 div.resume_item{
@@ -957,6 +930,12 @@ div.lightbox_image_div{
 
 img.lightbox_image{
 	height:100%;
+
+	/*height:200px;*/
+	/*width:100px;*/
+	/*width:400px;*/
+	/*height:auto;*/
+	width:auto;
 }
 
 div.caption{

@@ -34,7 +34,7 @@ function randomColor(){
 	var target = 'url("files/backgrounds/bg'+n+'.svg")';
 	console.log(target);
 	document.getElementById("body").style.backgroundImage = target;
-	// document.getElementById("body").style.animation="none";
+	document.getElementById("body").style.animation="none";
 
 }
 
