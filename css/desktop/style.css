@@ -134,7 +134,7 @@ div.header{
 
 
 /*//////////////animated background/////////*/
-/*@keyframes animatedBackground{
+@keyframes animatedBackground{
 	from{background-position: 0px 0px;}
 	to{background-position: 825px 0px;}
 }
@@ -142,10 +142,11 @@ div.header{
 @-webkit-keyframes animatedBackground{
 	from{background-position: 0px 0px;}
 	to{background-position: 825px 0px;}
-}*/
+}
 
 #body{
 	/*background-image: url("../../files/backgrounds/icons_colored_bg.svg");*/
+	background-size: 1000px auto;
 	background-position: 0 0px;
 	background-repeat: repeat;
 
