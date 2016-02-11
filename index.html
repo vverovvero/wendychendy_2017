@@ -9,14 +9,16 @@
 		<link rel="stylesheet" type="text/css" href="css/desktop/style.css" media="only screen and (min-device-width: 480px)">
 	<!-- 	<link rel="stylesheet" type="text/css" href="css/mobile/mstyleSplash.css" media="only screen and (max-device-width: 480px)"> -->
 	</head>
-	<body onload="randomColorAnimated();hideAllHeaders();sizeImages()" onresize="resizeImages()" id="body">
+	<body onload="loadAllImages();randomColorAnimated();hideAllHeaders();sizeImages();" onresize="resizeImages()" id="body">
 
 		<div id="container">
 
 			<div id="main" >
 
 				<div id="splash">
-					<img src="files/icons/piggy_white.svg" alt="piggy" style="width: 200px">
+					<div>
+						<img src="files/icons/piggy_white.svg" alt="piggy" style="width: 200px">
+					</div>
 					<div id="splashName">WENDY CHEN</div>
 					<div id="splashTagLine">PICTURES & CODE</div>
 				</div>
@@ -39,7 +41,7 @@
 						</div>
 					</div>
 			
-					<div id="homePigBullet" class="bullet" onclick="selectSplashPage();randomColorAnimated();">
+					<div id="homePigBullet" class="bullet" onclick="selectSplashPage();">
 						<img id="piggy" src="files/icons/heart.svg" alt="heart bullet">
 					</div>
 					<div id="header03" class="header" onclick="selectNavHeader(RESUME.id);underlineSelection(this.id);randomColor();">RESUME</div>
@@ -112,48 +114,61 @@
 							<div id="animation04" class="project animationProject" onclick="selectProject(this)">disney</div>
 						</div>
 						<div id="animation_gallery" class="work_gallery">
+							<!-- <div id="left_arrow" class="arrow">
+								<img src="files/icons/arrow_left.svg">
+							</div> -->
 							<div class="gallery">
 								<div id="animation01_gallery" class="video_gallery" style="display:flex">
+									<!-- <video controls>
+									  <source src="files/projects/animation01/where_i'll_go.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+									</video> -->
 									<iframe src="https://player.vimeo.com/video/153717699" width="100%" height="90%" frameborder="0" style="min-height:400px"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									<!-- <p><a href="https://vimeo.com/153717699">Where I&#039;ll Go</a> from <a href="https://vimeo.com/user48450050">Wendy Chen</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
 								</div>
 								<div id="animation02_gallery" style="display:none" class="video_gallery">
+									<!-- <video controls>
+									  <source src="files/projects/animation02/looking_under.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+									</video> -->
 									<iframe src="https://player.vimeo.com/video/153717864" width="100%" height="90%" frameborder="0" style="min-height:400px"webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									<!-- <p><a href="https://vimeo.com/153717864">Swimming Animation Test</a> from <a href="https://vimeo.com/user48450050">Wendy Chen</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
 								</div>
 								<div id="animation03_gallery" style="display:none" class="image_gallery">
 									<div class="imageBuffer">
-										<img id="animation03_gallery_1" class="projectImage" src="files/projects/animation03/scene_01.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_2" class="projectImage" src="files/projects/animation03/scene_02.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_3" class="projectImage" src="files/projects/animation03/scene_05.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_4" class="projectImage" src="files/projects/animation03/scene_06.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_5" class="projectImage" src="files/projects/animation03/scene_08.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_6" class="projectImage" src="files/projects/animation03/scene_09.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_7" class="projectImage" src="files/projects/animation03/scene_10.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_8" class="projectImage" src="files/projects/animation03/scene_11.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="animation03_gallery_9" class="projectImage" src="files/projects/animation03/scene_12.jpg" onclick="openLightBox(this)">
+										<img id="animation03_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 								</div>
 								<div id="animation04_gallery" style="display:none" class="no_preview">
@@ -178,7 +193,7 @@
 								abstract: selected stills and backgrounds from "where i'll go"
 							</div>
 							<div id="animation04_description" style="display:none">
-								no preview available.  please contact me to learn more about my work at walt disney animation studios.
+								permission to show work is pending.  currently no preview available.  please contact me to learn more about my work at walt disney animation studios.
 							</div>
 						</div>
 					</div>
@@ -198,242 +213,242 @@
 							<div class="gallery">
 								<div id="code01_gallery" class="image_gallery" style="display:flex">
 									<div class="imageBuffer">
-										<img id="code01_gallery_1" class="projectImage" src="files/projects/code01/buddha_01.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_2" class="projectImage" src="files/projects/code01/buddha_02.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_3" class="projectImage" src="files/projects/code01/buddha_03.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_4" class="projectImage" src="files/projects/code01/bunny_01.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_5" class="projectImage" src="files/projects/code01/bunny_02.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_6" class="projectImage" src="files/projects/code01/bunny_03_cropped.jpg" onclick="openLightBox(this)">
+										<img id="code01_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_7" class="projectImage" src="files/projects/code01/bunny_04.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_8" class="projectImage" src="files/projects/code01/bunny_05.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_9" class="projectImage" src="files/projects/code01/dragon_01.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_10" class="projectImage" src="files/projects/code01/dragon_02.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_10" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_11" class="projectImage" src="files/projects/code01/dragon_03.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_11" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_12" class="projectImage" src="files/projects/code01/dragon_04.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_12" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code01_gallery_13" class="projectImage" src="files/projects/code01/spheres_01.png" onclick="openLightBox(this)">
+										<img id="code01_gallery_13" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 								</div>
 								<div id="code02_gallery" class="image_gallery" style="display:none">
 									<div class="imageBuffer">
-										<img id="code02_gallery_1" class="projectImage" src="files/projects/code02/mockup_desktop/desktop1.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_2" class="projectImage" src="files/projects/code02/mockup_desktop/desktop2.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_3" class="projectImage" src="files/projects/code02/mockup_desktop/desktop3.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_4" class="projectImage" src="files/projects/code02/mockup_desktop/desktop4.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_5" class="projectImage" src="files/projects/code02/mockup_desktop/desktop5.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_6" class="projectImage" src="files/projects/code02/mockup_desktop/desktop6.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_7" class="projectImage" src="files/projects/code02/mockup_desktop/desktop7.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_8" class="projectImage" src="files/projects/code02/mockup_desktop/desktop8.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_9" class="projectImage" src="files/projects/code02/mockup_desktop/desktop9.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_10" class="projectImage" src="files/projects/code02/mockup_desktop/desktop10.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_10" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_11" class="projectImage" src="files/projects/code02/mockup_desktop/desktop11.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_11" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_12" class="projectImage" src="files/projects/code02/mockup_desktop/desktop12.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_12" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_13" class="projectImage" src="files/projects/code02/mockup_mobile/mobile1.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_13" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_14" class="projectImage" src="files/projects/code02/mockup_mobile/mobile2.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_14" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_15" class="projectImage" src="files/projects/code02/mockup_mobile/mobile3.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_15" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_16" class="projectImage" src="files/projects/code02/mockup_mobile/mobile4.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_16" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_17" class="projectImage" src="files/projects/code02/mockup_mobile/mobile5.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_17" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_18" class="projectImage" src="files/projects/code02/mockup_mobile/mobile6.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_18" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_19" class="projectImage" src="files/projects/code02/mockup_mobile/mobile7.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_19" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code02_gallery_20" class="projectImage" src="files/projects/code02/mockup_mobile/mobile8.jpg" onclick="openLightBox(this)">
+										<img id="code02_gallery_20" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
 								<div id="code03_gallery" class="image_gallery" style="display:none">
 									<div class="imageBuffer">
-										<img id="code03_gallery_1" class="projectImage" src="files/projects/code03/a_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_2" class="projectImage" src="files/projects/code03/b_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_3" class="projectImage" src="files/projects/code03/c_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_4" class="projectImage" src="files/projects/code03/d_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_5" class="projectImage" src="files/projects/code03/e_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_6" class="projectImage" src="files/projects/code03/f_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_7" class="projectImage" src="files/projects/code03/g_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_8" class="projectImage" src="files/projects/code03/h_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_9" class="projectImage" src="files/projects/code03/i_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_10" class="projectImage" src="files/projects/code03/j_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_10" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_11" class="projectImage" src="files/projects/code03/k_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_11" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_12" class="projectImage" src="files/projects/code03/l_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_12" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_13" class="projectImage" src="files/projects/code03/m_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_13" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_14" class="projectImage" src="files/projects/code03/n_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_14" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_15" class="projectImage" src="files/projects/code03/o_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_15" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_16" class="projectImage" src="files/projects/code03/p_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_16" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_17" class="projectImage" src="files/projects/code03/q_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_17" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_18" class="projectImage" src="files/projects/code03/r_sample.jpg" onclick="openLightBox(this)"> 
+										<img id="code03_gallery_18" class="projectImage" src="" onclick="openLightBox(this)"> 
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_19" class="projectImage" src="files/projects/code03/s_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_19" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_20" class="projectImage" src="files/projects/code03/t_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_20" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_21" class="projectImage" src="files/projects/code03/u_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_21" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_22" class="projectImage" src="files/projects/code03/v_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_22" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_23" class="projectImage" src="files/projects/code03/w_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_23" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_24" class="projectImage" src="files/projects/code03/x_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_24" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_25" class="projectImage" src="files/projects/code03/y_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_25" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="code03_gallery_26" class="projectImage" src="files/projects/code03/z_sample.jpg" onclick="openLightBox(this)">
+										<img id="code03_gallery_26" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
@@ -469,77 +484,77 @@
 							<div class="gallery">
 								<div id="painting01_gallery" class="image_gallery" style="display:flex">
 									<div class="imageBuffer">
-										<img id="painting01_gallery_1" class="projectImage" src="files/projects/painting01/01.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_2" class="projectImage" src="files/projects/painting01/02.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_3" class="projectImage" src="files/projects/painting01/03.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_4" class="projectImage" src="files/projects/painting01/04.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_5" class="projectImage" src="files/projects/painting01/05.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_6" class="projectImage" src="files/projects/painting01/06.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_7" class="projectImage" src="files/projects/painting01/07.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_8" class="projectImage" src="files/projects/painting01/08.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_9" class="projectImage" src="files/projects/painting01/09.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_10" class="projectImage" src="files/projects/painting01/10.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_10" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_11" class="projectImage" src="files/projects/painting01/11.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_11" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_12" class="projectImage" src="files/projects/painting01/12.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_12" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting01_gallery_13" class="projectImage" src="files/projects/painting01/13.jpg" onclick="openLightBox(this)">
+										<img id="painting01_gallery_13" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
 								<div id="painting02_gallery" class="image_gallery" style="display:none">
 									<div class="imageBuffer">
-										<img id="painting02_gallery_1" class="projectImage" src="files/projects/painting02/01.jpg" onclick="openLightBox(this)">
+										<img id="painting02_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting02_gallery_2" class="projectImage" src="files/projects/painting02/02.jpg" onclick="openLightBox(this)">
+										<img id="painting02_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting02_gallery_3" class="projectImage" src="files/projects/painting02/03.jpg" onclick="openLightBox(this)">
+										<img id="painting02_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting02_gallery_4" class="projectImage" src="files/projects/painting02/04.jpg" onclick="openLightBox(this)">
+										<img id="painting02_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="painting02_gallery_5" class="projectImage" src="files/projects/painting02/05.jpg" onclick="openLightBox(this)">
+										<img id="painting02_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
@@ -572,77 +587,77 @@
 							<div class="gallery">
 								<div id="design01_gallery" class="image_gallery" style="display:flex">
 									<div class="imageBuffer">
-										<img id="design01_gallery_1" class="projectImage" src="files/projects/design01/01.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_2" class="projectImage" src="files/projects/design01/02.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_3" class="projectImage" src="files/projects/design01/03.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_4" class="projectImage" src="files/projects/design01/04.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_5" class="projectImage" src="files/projects/design01/05.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_6" class="projectImage" src="files/projects/design01/06.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_7" class="projectImage" src="files/projects/design01/07.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_8" class="projectImage" src="files/projects/design01/08.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_9" class="projectImage" src="files/projects/design01/09.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_10" class="projectImage" src="files/projects/design01/10.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_10" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_11" class="projectImage" src="files/projects/design01/11.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_11" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design01_gallery_12" class="projectImage" src="files/projects/design01/12.jpg" onclick="openLightBox(this)">
+										<img id="design01_gallery_12" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
 								<div id="design02_gallery" class="image_gallery" style="display:none">
 									<div class="imageBuffer">
-										<img id="design02_gallery_1" class="projectImage" src="files/projects/design02/01_big.png" onclick="openLightBox(this)">
+										<img id="design02_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design02_gallery_2" class="projectImage" src="files/projects/design02/02.jpg" onclick="openLightBox(this)">
+										<img id="design02_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design02_gallery_3" class="projectImage" src="files/projects/design02/03.jpg" onclick="openLightBox(this)">
+										<img id="design02_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design02_gallery_4" class="projectImage" src="files/projects/design02/04.jpg" onclick="openLightBox(this)">
+										<img id="design02_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design02_gallery_5" class="projectImage" src="files/projects/design02/05.jpg" onclick="openLightBox(this)">
+										<img id="design02_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="design02_gallery_6" class="projectImage" src="files/projects/design02/06.jpg" onclick="openLightBox(this)">
+										<img id="design02_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
@@ -674,87 +689,87 @@
 							<div class="gallery">
 								<div id="photography01_gallery" class="image_gallery" style="display:flex">
 									<div class="imageBuffer">
-										<img id="photography01_gallery_1" class="projectImage" src="files/projects/photography01/01.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_1" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_2" class="projectImage" src="files/projects/photography01/02.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_2" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_3" class="projectImage" src="files/projects/photography01/03.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_3" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_4" class="projectImage" src="files/projects/photography01/04.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_4" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_5" class="projectImage" src="files/projects/photography01/05.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_5" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_6" class="projectImage" src="files/projects/photography01/06.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_6" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_7" class="projectImage" src="files/projects/photography01/07.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_7" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_8" class="projectImage" src="files/projects/photography01/08.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_8" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_9" class="projectImage" src="files/projects/photography01/09.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_9" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_10" class="projectImage" src="files/projects/photography01/10.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_10" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_11" class="projectImage" src="files/projects/photography01/11.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_11" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_12" class="projectImage" src="files/projects/photography01/12.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_12" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_13" class="projectImage" src="files/projects/photography01/13.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_13" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_14" class="projectImage" src="files/projects/photography01/14.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_14" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_15" class="projectImage" src="files/projects/photography01/15.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_15" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_16" class="projectImage" src="files/projects/photography01/16.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_16" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_17" class="projectImage" src="files/projects/photography01/17.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_17" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_18" class="projectImage" src="files/projects/photography01/18.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_18" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_19" class="projectImage" src="files/projects/photography01/19.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_19" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_20" class="projectImage" src="files/projects/photography01/20.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_20" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 									<div class="imageBuffer">
-										<img id="photography01_gallery_21" class="projectImage" src="files/projects/photography01/21.jpg" onclick="openLightBox(this)">
+										<img id="photography01_gallery_21" class="projectImage" src="" onclick="openLightBox(this)">
 									</div>
 									<div class="imagePad">&nbsp;&nbsp;</div>
 								</div>
@@ -952,7 +967,7 @@
 					<div id="animation03_lightbox" class="lightbox_gallery">
 						<div id="animation03_lightbox_1" class="imageCaptionPair">
 							<div id="animation03_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_01.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_1_caption" class="caption">
 								<div>
@@ -962,7 +977,7 @@
 						</div>
 						<div id="animation03_lightbox_2" class="imageCaptionPair">
 							<div id="animation03_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_02.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_2_caption" class="caption">
 								<div>
@@ -972,7 +987,7 @@
 						</div>
 						<div id="animation03_lightbox_3" class="imageCaptionPair">
 							<div id="animation03_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_05.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_3_caption" class="caption">
 								<div>
@@ -982,7 +997,7 @@
 						</div>
 						<div id="animation03_lightbox_4" class="imageCaptionPair">
 							<div id="animation03_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_06.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_4_caption" class="caption">
 								<div>
@@ -992,7 +1007,7 @@
 						</div>
 						<div id="animation03_lightbox_5" class="imageCaptionPair">
 							<div id="animation03_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_08.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_5_caption" class="caption">
 								<div>
@@ -1002,7 +1017,7 @@
 						</div>
 						<div id="animation03_lightbox_6" class="imageCaptionPair">
 							<div id="animation03_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_09.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_6_caption" class="caption">
 								<div>
@@ -1012,7 +1027,7 @@
 						</div>
 						<div id="animation03_lightbox_7" class="imageCaptionPair">
 							<div id="animation03_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_10.jpg" class="lightbox_image">
+								<img  id="animation03_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_7_caption" class="caption">
 								<div>
@@ -1022,7 +1037,7 @@
 						</div>
 						<div id="animation03_lightbox_8" class="imageCaptionPair">
 							<div id="animation03_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_11.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_8_caption" class="caption">
 								<div>
@@ -1032,7 +1047,7 @@
 						</div>
 						<div id="animation03_lightbox_9" class="imageCaptionPair">
 							<div id="animation03_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/animation03/scene_12.jpg" class="lightbox_image">
+								<img id="animation03_lightbox_9_src"  src="" class="lightbox_image">
 							</div>
 							<div id="animation03_lightbox_9_caption" class="caption">
 								<div>
@@ -1045,7 +1060,7 @@
 					<div id="code01_lightbox" class="lightbox_gallery">
 						<div id="code01_lightbox_1" class="imageCaptionPair">
 							<div id="code01_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/code01/buddha_01.png" class="lightbox_image">
+								<img  id="code01_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_1_caption" class="caption">
 								<div>
@@ -1055,7 +1070,7 @@
 						</div>
 						<div id="code01_lightbox_2" class="imageCaptionPair">
 							<div id="code01_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/code01/buddha_02.png" class="lightbox_image">
+								<img id="code01_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_2_caption" class="caption">
 								<div>
@@ -1065,7 +1080,7 @@
 						</div>
 						<div id="code01_lightbox_3" class="imageCaptionPair">
 							<div id="code01_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/code01/buddha_03.png" class="lightbox_image">
+								<img id="code01_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_3_caption" class="caption">
 								<div>
@@ -1075,7 +1090,7 @@
 						</div>
 						<div id="code01_lightbox_4" class="imageCaptionPair">
 							<div id="code01_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/code01/bunny_01.png" class="lightbox_image">
+								<img id="code01_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_4_caption" class="caption">
 								<div>
@@ -1085,7 +1100,7 @@
 						</div>
 						<div id="code01_lightbox_5" class="imageCaptionPair">
 							<div id="code01_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/code01/bunny_02.png" class="lightbox_image">
+								<img id="code01_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_5_caption" class="caption">
 								<div>
@@ -1095,7 +1110,7 @@
 						</div>
 						<div id="code01_lightbox_6" class="imageCaptionPair">
 							<div id="code01_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/code01/bunny_03_cropped.jpg" class="lightbox_image">
+								<img  id="code01_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_6_caption" class="caption">
 								<div>
@@ -1105,7 +1120,7 @@
 						</div>
 						<div id="code01_lightbox_7" class="imageCaptionPair">
 							<div id="code01_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/code01/bunny_04.png" class="lightbox_image">
+								<img id="code01_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_7_caption" class="caption">
 								<div>
@@ -1115,7 +1130,7 @@
 						</div>
 						<div id="code01_lightbox_8" class="imageCaptionPair">
 							<div id="code01_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/code01/bunny_05.png" class="lightbox_image">
+								<img id="code01_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_8_caption" class="caption">
 								<div>
@@ -1125,7 +1140,7 @@
 						</div>
 						<div id="code01_lightbox_9" class="imageCaptionPair">
 							<div id="code01_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/code01/dragon_01.png" class="lightbox_image">
+								<img id="code01_lightbox_9_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_9_caption" class="caption">
 								<div>
@@ -1135,7 +1150,7 @@
 						</div>
 						<div id="code01_lightbox_10" class="imageCaptionPair">
 							<div id="code01_lightbox_10_image" class="lightbox_image_div">
-								<img src="files/projects/code01/dragon_02.png" class="lightbox_image">
+								<img id="code01_lightbox_10_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_10_caption" class="caption">
 								<div>
@@ -1145,7 +1160,7 @@
 						</div>
 						<div id="code01_lightbox_11" class="imageCaptionPair">
 							<div id="code01_lightbox_11_image" class="lightbox_image_div">
-								<img src="files/projects/code01/dragon_03.png" class="lightbox_image">
+								<img id="code01_lightbox_11_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_11_caption" class="caption">
 								<div>
@@ -1155,7 +1170,7 @@
 						</div>
 						<div id="code01_lightbox_12" class="imageCaptionPair">
 							<div id="code01_lightbox_12_image" class="lightbox_image_div">
-								<img src="files/projects/code01/dragon_04.png" class="lightbox_image">
+								<img id="code01_lightbox_12_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_12_caption" class="caption">
 								<div>
@@ -1165,7 +1180,7 @@
 						</div>
 						<div id="code01_lightbox_13" class="imageCaptionPair">
 							<div id="code01_lightbox_13_image" class="lightbox_image_div">
-								<img src="files/projects/code01/spheres_01.png" class="lightbox_image">
+								<img id="code01_lightbox_13_src" src="" class="lightbox_image">
 							</div>
 							<div id="code01_lightbox_13_caption" class="caption">
 								<div>
@@ -1178,7 +1193,7 @@
 					<div id="code02_lightbox" class="lightbox_gallery">
 						<div id="code02_lightbox_1" class="imageCaptionPair">
 							<div id="code02_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop1.jpg" class="lightbox_image">
+								<img id="code02_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_1_caption" class="caption">
 								<div>
@@ -1188,7 +1203,7 @@
 						</div>
 						<div id="code02_lightbox_2" class="imageCaptionPair">
 							<div id="code02_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop2.jpg" class="lightbox_image">
+								<img id="code02_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_2_caption" class="caption">
 								<div>
@@ -1198,7 +1213,7 @@
 						</div>
 						<div id="code02_lightbox_3" class="imageCaptionPair">
 							<div id="code02_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop3.jpg" class="lightbox_image">
+								<img id="code02_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_3_caption" class="caption">
 								<div>
@@ -1208,7 +1223,7 @@
 						</div>
 						<div id="code02_lightbox_4" class="imageCaptionPair">
 							<div id="code02_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop4.jpg" class="lightbox_image">
+								<img id="code02_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_4_caption" class="caption">
 								<div>
@@ -1218,7 +1233,7 @@
 						</div>
 						<div id="code02_lightbox_5" class="imageCaptionPair">
 							<div id="code02_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop5.jpg" class="lightbox_image">
+								<img id="code02_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_5_caption" class="caption">
 								<div>
@@ -1228,7 +1243,7 @@
 						</div>
 						<div id="code02_lightbox_6" class="imageCaptionPair">
 							<div id="code02_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop6.jpg" class="lightbox_image">
+								<img id="code02_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_6_caption" class="caption">
 								<div>
@@ -1238,7 +1253,7 @@
 						</div>
 						<div id="code02_lightbox_7" class="imageCaptionPair">
 							<div id="code02_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop7.jpg" class="lightbox_image">
+								<img id="code02_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_7_caption" class="caption">
 								<div>
@@ -1248,7 +1263,7 @@
 						</div>
 						<div id="code02_lightbox_8" class="imageCaptionPair">
 							<div id="code02_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop8.jpg" class="lightbox_image">
+								<img id="code02_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_8_caption" class="caption">
 								<div>
@@ -1258,7 +1273,7 @@
 						</div>
 						<div id="code02_lightbox_9" class="imageCaptionPair">
 							<div id="code02_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop9.jpg" class="lightbox_image">
+								<img id="code02_lightbox_9_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_9_caption" class="caption">
 								<div>
@@ -1268,7 +1283,7 @@
 						</div>
 						<div id="code02_lightbox_10" class="imageCaptionPair">
 							<div id="code02_lightbox_10_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop10.jpg" class="lightbox_image">
+								<img id="code02_lightbox_10_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_10_caption" class="caption">
 								<div>
@@ -1278,7 +1293,7 @@
 						</div>
 						<div id="code02_lightbox_11" class="imageCaptionPair">
 							<div id="code02_lightbox_11_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop11.jpg" class="lightbox_image">
+								<img id="code02_lightbox_11_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_11_caption" class="caption">
 								<div>
@@ -1288,7 +1303,7 @@
 						</div>
 						<div id="code02_lightbox_12" class="imageCaptionPair">
 							<div id="code02_lightbox_12_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_desktop/desktop12.jpg" class="lightbox_image">
+								<img id="code02_lightbox_12_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_12_caption" class="caption">
 								<div>
@@ -1298,7 +1313,7 @@
 						</div>
 						<div id="code02_lightbox_13" class="imageCaptionPair">
 							<div id="code02_lightbox_13_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile1.jpg" class="lightbox_image">
+								<img id="code02_lightbox_13_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_13_caption" class="caption">
 								<div>
@@ -1308,7 +1323,7 @@
 						</div>
 						<div id="code02_lightbox_14" class="imageCaptionPair">
 							<div id="code02_lightbox_14_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile2.jpg" class="lightbox_image">
+								<img id="code02_lightbox_14_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_14_caption" class="caption">
 								<div>
@@ -1318,7 +1333,7 @@
 						</div>
 						<div id="code02_lightbox_15" class="imageCaptionPair">
 							<div id="code02_lightbox_15_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile3.jpg" class="lightbox_image">
+								<img id="code02_lightbox_15_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_15_caption" class="caption">
 								<div>
@@ -1328,7 +1343,7 @@
 						</div>
 						<div id="code02_lightbox_16" class="imageCaptionPair">
 							<div id="code02_lightbox_16_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile4.jpg" class="lightbox_image">
+								<img id="code02_lightbox_16_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_16_caption" class="caption">
 								<div>
@@ -1338,7 +1353,7 @@
 						</div>
 						<div id="code02_lightbox_17" class="imageCaptionPair">
 							<div id="code02_lightbox_17_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile5.jpg" class="lightbox_image">
+								<img id="code02_lightbox_17_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_17_caption" class="caption">
 								<div>
@@ -1348,7 +1363,7 @@
 						</div>
 						<div id="code02_lightbox_18" class="imageCaptionPair">
 							<div id="code02_lightbox_18_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile6.jpg" class="lightbox_image">
+								<img id="code02_lightbox_18_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_18_caption" class="caption">
 								<div>
@@ -1358,7 +1373,7 @@
 						</div>
 						<div id="code02_lightbox_19" class="imageCaptionPair">
 							<div id="code02_lightbox_19_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile7.jpg" class="lightbox_image">
+								<img id="code02_lightbox_19_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_19_caption" class="caption">
 								<div>
@@ -1368,7 +1383,7 @@
 						</div>
 						<div id="code02_lightbox_20" class="imageCaptionPair">
 							<div id="code02_lightbox_20_image" class="lightbox_image_div">
-								<img src="files/projects/code02/mockup_mobile/mobile8.jpg" class="lightbox_image">
+								<img id="code02_lightbox_20_src" src="" class="lightbox_image">
 							</div>
 							<div id="code02_lightbox_20_caption" class="caption">
 								<div>
@@ -1381,7 +1396,7 @@
 					<div id="code03_lightbox" class="lightbox_gallery">
 						<div id="code03_lightbox_1" class="imageCaptionPair">
 							<div id="code03_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/code03/a_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_1_caption" class="caption">
 								<div>
@@ -1391,7 +1406,7 @@
 						</div>
 						<div id="code03_lightbox_2" class="imageCaptionPair">
 							<div id="code03_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/code03/b_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_2_caption" class="caption">
 								<div>
@@ -1401,7 +1416,7 @@
 						</div>
 						<div id="code03_lightbox_3" class="imageCaptionPair">
 							<div id="code03_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/code03/c_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_3_caption" class="caption">
 								<div>
@@ -1411,7 +1426,7 @@
 						</div>
 						<div id="code03_lightbox_4" class="imageCaptionPair">
 							<div id="code03_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/code03/d_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_4_caption" class="caption">
 								<div>
@@ -1421,7 +1436,7 @@
 						</div>
 						<div id="code03_lightbox_5" class="imageCaptionPair">
 							<div id="code03_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/code03/e_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_5_caption" class="caption">
 								<div>
@@ -1431,7 +1446,7 @@
 						</div>
 						<div id="code03_lightbox_6" class="imageCaptionPair">
 							<div id="code03_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/code03/f_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_6_caption" class="caption">
 								<div>
@@ -1441,7 +1456,7 @@
 						</div>
 						<div id="code03_lightbox_7" class="imageCaptionPair">
 							<div id="code03_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/code03/g_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_7_caption" class="caption">
 								<div>
@@ -1451,7 +1466,7 @@
 						</div>
 						<div id="code03_lightbox_8" class="imageCaptionPair">
 							<div id="code03_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/code03/h_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_8_caption" class="caption">
 								<div>
@@ -1461,7 +1476,7 @@
 						</div>
 						<div id="code03_lightbox_9" class="imageCaptionPair">
 							<div id="code03_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/code03/i_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_9_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_9_caption" class="caption">
 								<div>
@@ -1471,7 +1486,7 @@
 						</div>
 						<div id="code03_lightbox_10" class="imageCaptionPair">
 							<div id="code03_lightbox_10_image" class="lightbox_image_div">
-								<img src="files/projects/code03/j_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_10_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_10_caption" class="caption">
 								<div>
@@ -1481,7 +1496,7 @@
 						</div>
 						<div id="code03_lightbox_11" class="imageCaptionPair">
 							<div id="code03_lightbox_11_image" class="lightbox_image_div">
-								<img src="files/projects/code03/k_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_11_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_11_caption" class="caption">
 								<div>
@@ -1491,7 +1506,7 @@
 						</div>
 						<div id="code03_lightbox_12" class="imageCaptionPair">
 							<div id="code03_lightbox_12_image" class="lightbox_image_div">
-								<img src="files/projects/code03/l_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_12_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_12_caption" class="caption">
 								<div>
@@ -1501,7 +1516,7 @@
 						</div>
 						<div id="code03_lightbox_13" class="imageCaptionPair">
 							<div id="code03_lightbox_13_image" class="lightbox_image_div">
-								<img src="files/projects/code03/m_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_13_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_13_caption" class="caption">
 								<div>
@@ -1511,7 +1526,7 @@
 						</div>
 						<div id="code03_lightbox_14" class="imageCaptionPair">
 							<div id="code03_lightbox_14_image" class="lightbox_image_div">
-								<img src="files/projects/code03/n_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_14_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_14_caption" class="caption">
 								<div>
@@ -1521,7 +1536,7 @@
 						</div>
 						<div id="code03_lightbox_15" class="imageCaptionPair">
 							<div id="code03_lightbox_15_image" class="lightbox_image_div">
-								<img src="files/projects/code03/o_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_15_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_15_caption" class="caption">
 								<div>
@@ -1531,7 +1546,7 @@
 						</div>
 						<div id="code03_lightbox_16" class="imageCaptionPair">
 							<div id="code03_lightbox_16_image" class="lightbox_image_div">
-								<img src="files/projects/code03/p_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_16_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_16_caption" class="caption">
 								<div>
@@ -1541,7 +1556,7 @@
 						</div>
 						<div id="code03_lightbox_17" class="imageCaptionPair">
 							<div id="code03_lightbox_17_image" class="lightbox_image_div">
-								<img src="files/projects/code03/q_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_17_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_17_caption" class="caption">
 								<div>
@@ -1551,7 +1566,7 @@
 						</div>
 						<div id="code03_lightbox_18" class="imageCaptionPair">
 							<div id="code03_lightbox_18_image" class="lightbox_image_div">
-								<img src="files/projects/code03/r_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_18_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_18_caption" class="caption">
 								<div>
@@ -1561,7 +1576,7 @@
 						</div>
 						<div id="code03_lightbox_19" class="imageCaptionPair">
 							<div id="code03_lightbox_19_image" class="lightbox_image_div">
-								<img src="files/projects/code03/s_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_19_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_19_caption" class="caption">
 								<div>
@@ -1571,7 +1586,7 @@
 						</div>
 						<div id="code03_lightbox_20" class="imageCaptionPair">
 							<div id="code03_lightbox_20_image" class="lightbox_image_div">
-								<img src="files/projects/code03/t_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_20_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_20_caption" class="caption">
 								<div>
@@ -1581,7 +1596,7 @@
 						</div>
 						<div id="code03_lightbox_21" class="imageCaptionPair">
 							<div id="code03_lightbox_21_image" class="lightbox_image_div">
-								<img src="files/projects/code03/u_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_21_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_21_caption" class="caption">
 								<div>
@@ -1591,7 +1606,7 @@
 						</div>
 						<div id="code03_lightbox_22" class="imageCaptionPair">
 							<div id="code03_lightbox_22_image" class="lightbox_image_div">
-								<img src="files/projects/code03/v_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_22_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_22_caption" class="caption">
 								<div>
@@ -1601,7 +1616,7 @@
 						</div>
 						<div id="code03_lightbox_23" class="imageCaptionPair">
 							<div id="code03_lightbox_23_image" class="lightbox_image_div">
-								<img src="files/projects/code03/w_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_23_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_23_caption" class="caption">
 								<div>
@@ -1611,7 +1626,7 @@
 						</div>
 						<div id="code03_lightbox_24" class="imageCaptionPair">
 							<div id="code03_lightbox_24_image" class="lightbox_image_div">
-								<img src="files/projects/code03/x_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_24_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_24_caption" class="caption">
 								<div>
@@ -1621,7 +1636,7 @@
 						</div>
 						<div id="code03_lightbox_25" class="imageCaptionPair">
 							<div id="code03_lightbox_25_image" class="lightbox_image_div">
-								<img src="files/projects/code03/y_sample.jpg" class="lightbox_image">
+								<img  id="code03_lightbox_25_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_25_caption" class="caption">
 								<div>
@@ -1631,7 +1646,7 @@
 						</div>
 						<div id="code03_lightbox_26" class="imageCaptionPair">
 							<div id="code03_lightbox_26_image" class="lightbox_image_div">
-								<img src="files/projects/code03/z_sample.jpg" class="lightbox_image">
+								<img id="code03_lightbox_26_src" src="" class="lightbox_image">
 							</div>
 							<div id="code03_lightbox_26_caption" class="caption">
 								<div>
@@ -1644,7 +1659,7 @@
 					<div id="painting01_lightbox" class="lightbox_gallery">
 						<div id="painting01_lightbox_1" class="imageCaptionPair">
 							<div id="painting01_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/01.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_1_caption" class="caption">
 								<div>
@@ -1654,7 +1669,7 @@
 						</div>
 						<div id="painting01_lightbox_2" class="imageCaptionPair">
 							<div id="painting01_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/02.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_2_caption" class="caption">
 								<div>
@@ -1664,7 +1679,7 @@
 						</div>
 						<div id="painting01_lightbox_3" class="imageCaptionPair">
 							<div id="painting01_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/03.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_3_caption" class="caption">
 								<div>
@@ -1674,7 +1689,7 @@
 						</div>
 						<div id="painting01_lightbox_4" class="imageCaptionPair">
 							<div id="painting01_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/04.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_4_caption" class="caption">
 								<div>
@@ -1684,7 +1699,7 @@
 						</div>
 						<div id="painting01_lightbox_5" class="imageCaptionPair">
 							<div id="painting01_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/05.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_5_caption" class="caption">
 								<div>
@@ -1694,7 +1709,7 @@
 						</div>
 						<div id="painting01_lightbox_6" class="imageCaptionPair">
 							<div id="painting01_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/06.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_6_caption" class="caption">
 								<div>
@@ -1704,7 +1719,7 @@
 						</div>
 						<div id="painting01_lightbox_7" class="imageCaptionPair">
 							<div id="painting01_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/07.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_7_caption" class="caption">
 								<div>
@@ -1714,7 +1729,7 @@
 						</div>
 						<div id="painting01_lightbox_8" class="imageCaptionPair">
 							<div id="painting01_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/08.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_8_caption" class="caption">
 								<div>
@@ -1724,7 +1739,7 @@
 						</div>
 						<div id="painting01_lightbox_9" class="imageCaptionPair">
 							<div id="painting01_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/09.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_9_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_9_caption" class="caption">
 								<div>
@@ -1734,7 +1749,7 @@
 						</div>
 						<div id="painting01_lightbox_10" class="imageCaptionPair">
 							<div id="painting01_lightbox_10_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/10.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_10_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_10_caption" class="caption">
 								<div>
@@ -1744,7 +1759,7 @@
 						</div>
 						<div id="painting01_lightbox_11" class="imageCaptionPair">
 							<div id="painting01_lightbox_11_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/11.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_11_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_11_caption" class="caption">
 								<div>
@@ -1754,7 +1769,7 @@
 						</div>
 						<div id="painting01_lightbox_12" class="imageCaptionPair">
 							<div id="painting01_lightbox_12_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/12.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_12_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_12_caption" class="caption">
 								<div>
@@ -1764,7 +1779,7 @@
 						</div>
 						<div id="painting01_lightbox_13" class="imageCaptionPair">
 							<div id="painting01_lightbox_13_image" class="lightbox_image_div">
-								<img src="files/projects/painting01/13.jpg" class="lightbox_image">
+								<img id="painting01_lightbox_13_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting01_lightbox_13_caption" class="caption">
 								<div>
@@ -1777,7 +1792,7 @@
 					<div id="painting02_lightbox" class="lightbox_gallery">
 						<div id="painting02_lightbox_1" class="imageCaptionPair">
 							<div id="painting02_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/painting02/01.jpg" class="lightbox_image">
+								<img id="painting02_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting02_lightbox_1_caption" class="caption">
 								<div>
@@ -1787,7 +1802,7 @@
 						</div>
 						<div id="painting02_lightbox_2" class="imageCaptionPair">
 							<div id="painting02_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/painting02/02.jpg" class="lightbox_image">
+								<img id="painting02_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting02_lightbox_2_caption" class="caption">
 								<div>
@@ -1797,7 +1812,7 @@
 						</div>
 						<div id="painting02_lightbox_3" class="imageCaptionPair">
 							<div id="painting02_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/painting02/03.jpg" class="lightbox_image">
+								<img id="painting02_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting02_lightbox_3_caption" class="caption">
 								<div>
@@ -1807,7 +1822,7 @@
 						</div>
 						<div id="painting02_lightbox_4" class="imageCaptionPair">
 							<div id="painting02_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/painting02/04.jpg" class="lightbox_image">
+								<img id="painting02_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting02_lightbox_4_caption" class="caption">
 								<div>
@@ -1817,7 +1832,7 @@
 						</div>
 						<div id="painting02_lightbox_5" class="imageCaptionPair">
 							<div id="painting02_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/painting02/05.jpg" class="lightbox_image">
+								<img id="painting02_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="painting02_lightbox_5_caption" class="caption">
 								<div>
@@ -1830,7 +1845,7 @@
 					<div id="design01_lightbox" class="lightbox_gallery">
 						<div id="design01_lightbox_1" class="imageCaptionPair">
 							<div id="design01_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/design01/01.jpg" class="lightbox_image">
+								<img id="design01_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_1_caption" class="caption">
 								<div>
@@ -1840,7 +1855,7 @@
 						</div>
 						<div id="design01_lightbox_2" class="imageCaptionPair">
 							<div id="design01_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/design01/02.jpg" class="lightbox_image">
+								<img id="design01_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_2_caption" class="caption">
 								<div>
@@ -1850,7 +1865,7 @@
 						</div>
 						<div id="design01_lightbox_3" class="imageCaptionPair">
 							<div id="design01_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/design01/03.jpg" class="lightbox_image">
+								<img id="design01_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_3_caption" class="caption">
 								<div>
@@ -1859,8 +1874,8 @@
 							</div>
 						</div>
 						<div id="design01_lightbox_4" class="imageCaptionPair">
-							<div id="design01_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/design01/04.jpg" class="lightbox_image">
+							<div class="lightbox_image_div">
+								<img id="design01_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_4_caption" class="caption">
 								<div>
@@ -1870,7 +1885,7 @@
 						</div>
 						<div id="design01_lightbox_5" class="imageCaptionPair">
 							<div id="design01_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/design01/05.jpg" class="lightbox_image">
+								<img  id="design01_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_5_caption" class="caption">
 								<div>
@@ -1880,7 +1895,7 @@
 						</div>
 						<div id="design01_lightbox_6" class="imageCaptionPair">
 							<div id="design01_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/design01/06.jpg" class="lightbox_image">
+								<img id="design01_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_6_caption" class="caption">
 								<div>
@@ -1890,7 +1905,7 @@
 						</div>
 						<div id="design01_lightbox_7" class="imageCaptionPair">
 							<div id="design01_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/design01/07.jpg" class="lightbox_image">
+								<img id="design01_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_7_caption" class="caption">
 								<div>
@@ -1900,7 +1915,7 @@
 						</div>
 						<div id="design01_lightbox_8" class="imageCaptionPair">
 							<div id="design01_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/design01/08.jpg" class="lightbox_image">
+								<img id="design01_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_8_caption" class="caption">
 								<div>
@@ -1910,7 +1925,7 @@
 						</div>
 						<div id="design01_lightbox_9" class="imageCaptionPair">
 							<div id="design01_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/design01/09.jpg" class="lightbox_image">
+								<img id="design01_lightbox_9_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_9_caption" class="caption">
 								<div>
@@ -1920,7 +1935,7 @@
 						</div>
 						<div id="design01_lightbox_10" class="imageCaptionPair">
 							<div id="design01_lightbox_10_image" class="lightbox_image_div">
-								<img src="files/projects/design01/10.jpg" class="lightbox_image">
+								<img id="design01_lightbox_10_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_10_caption" class="caption">
 								<div>
@@ -1930,7 +1945,7 @@
 						</div>
 						<div id="design01_lightbox_11" class="imageCaptionPair">
 							<div id="design01_lightbox_11_image" class="lightbox_image_div">
-								<img src="files/projects/design01/11.jpg" class="lightbox_image">
+								<img id="design01_lightbox_11_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_11_caption" class="caption">
 								<div>
@@ -1940,7 +1955,7 @@
 						</div>
 						<div id="design01_lightbox_12" class="imageCaptionPair">
 							<div id="design01_lightbox_12_image" class="lightbox_image_div">
-								<img src="files/projects/design01/12.jpg" class="lightbox_image">
+								<img id="design01_lightbox_12_src" src="" class="lightbox_image">
 							</div>
 							<div id="design01_lightbox_12_caption" class="caption">
 								<div>
@@ -1953,7 +1968,7 @@
 					<div id="design02_lightbox" class="lightbox_gallery">
 						<div id="design02_lightbox_1" class="imageCaptionPair">
 							<div id="design02_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/design02/01_big.png" class="lightbox_image">
+								<img id="design02_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="design02_lightbox_1_caption" class="caption">
 								<div>
@@ -1963,7 +1978,7 @@
 						</div>
 						<div id="design02_lightbox_2" class="imageCaptionPair">
 							<div id="design02_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/design02/02.jpg" class="lightbox_image">
+								<img id="design02_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="design02_lightbox_2_caption" class="caption">
 								<div>
@@ -1973,7 +1988,7 @@
 						</div>
 						<div id="design02_lightbox_3" class="imageCaptionPair">
 							<div id="design02_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/design02/03.jpg" class="lightbox_image">
+								<img id="design02_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="design02_lightbox_3_caption" class="caption">
 								<div>
@@ -1983,7 +1998,7 @@
 						</div>
 						<div id="design02_lightbox_4" class="imageCaptionPair">
 							<div id="design02_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/design02/04.jpg" class="lightbox_image">
+								<img id="design02_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="design02_lightbox_4_caption" class="caption">
 								<div>
@@ -1993,7 +2008,7 @@
 						</div>
 						<div id="design02_lightbox_5" class="imageCaptionPair">
 							<div id="design02_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/design02/05.jpg" class="lightbox_image">
+								<img id="design02_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="design02_lightbox_5_caption" class="caption">
 								<div>
@@ -2003,7 +2018,7 @@
 						</div>
 						<div id="design02_lightbox_6" class="imageCaptionPair">
 							<div id="design02_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/design02/06.jpg" class="lightbox_image">
+								<img id="design02_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="design02_lightbox_6_caption" class="caption">
 								<div>
@@ -2016,7 +2031,7 @@
 					<div id="photography01_lightbox" class="lightbox_gallery">
 						<div id="photography01_lightbox_1" class="imageCaptionPair">
 							<div id="photography01_lightbox_1_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/01.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_1_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_1_caption" class="caption">
 								<div>
@@ -2026,7 +2041,7 @@
 						</div>
 						<div id="photography01_lightbox_2" class="imageCaptionPair">
 							<div id="photography01_lightbox_2_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/02.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_2_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_2_caption" class="caption">
 								<div>
@@ -2036,7 +2051,7 @@
 						</div>
 						<div id="photography01_lightbox_3" class="imageCaptionPair">
 							<div id="photography01_lightbox_3_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/03.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_3_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_3_caption" class="caption">
 								<div>
@@ -2046,7 +2061,7 @@
 						</div>
 						<div id="photography01_lightbox_4" class="imageCaptionPair">
 							<div id="photography01_lightbox_4_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/04.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_4_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_4_caption" class="caption">
 								<div>
@@ -2056,7 +2071,7 @@
 						</div>
 						<div id="photography01_lightbox_5" class="imageCaptionPair">
 							<div id="photography01_lightbox_5_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/05.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_5_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_5_caption" class="caption">
 								<div>
@@ -2066,7 +2081,7 @@
 						</div>
 						<div id="photography01_lightbox_6" class="imageCaptionPair">
 							<div id="photography01_lightbox_6_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/06.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_6_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_6_caption" class="caption">
 								<div>
@@ -2076,7 +2091,7 @@
 						</div>
 						<div id="photography01_lightbox_7" class="imageCaptionPair">
 							<div id="photography01_lightbox_7_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/07.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_7_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_7_caption" class="caption">
 								<div>
@@ -2086,7 +2101,7 @@
 						</div>
 						<div id="photography01_lightbox_8" class="imageCaptionPair">
 							<div id="photography01_lightbox_8_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/08.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_8_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_8_caption" class="caption">
 								<div>
@@ -2096,7 +2111,7 @@
 						</div>
 						<div id="photography01_lightbox_9" class="imageCaptionPair">
 							<div id="photography01_lightbox_9_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/09.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_9_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_9_caption" class="caption">
 								<div>
@@ -2106,7 +2121,7 @@
 						</div>
 						<div id="photography01_lightbox_10" class="imageCaptionPair">
 							<div id="photography01_lightbox_10_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/10.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_10_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_10_caption" class="caption">
 								<div>
@@ -2116,7 +2131,7 @@
 						</div>
 						<div id="photography01_lightbox_11" class="imageCaptionPair">
 							<div id="photography01_lightbox_11_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/11.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_11_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_11_caption" class="caption">
 								<div>
@@ -2126,7 +2141,7 @@
 						</div>
 						<div id="photography01_lightbox_12" class="imageCaptionPair">
 							<div id="photography01_lightbox_12_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/12.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_12_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_12_caption" class="caption">
 								<div>
@@ -2136,7 +2151,7 @@
 						</div>
 						<div id="photography01_lightbox_13" class="imageCaptionPair">
 							<div id="photography01_lightbox_13_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/13.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_13_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_13_caption" class="caption">
 								<div>
@@ -2146,7 +2161,7 @@
 						</div>
 						<div id="photography01_lightbox_14" class="imageCaptionPair">
 							<div id="photography01_lightbox_14_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/14.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_14_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_14_caption" class="caption">
 								<div>
@@ -2156,7 +2171,7 @@
 						</div>
 						<div id="photography01_lightbox_15" class="imageCaptionPair">
 							<div id="photography01_lightbox_15_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/15.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_15_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_15_caption" class="caption">
 								<div>
@@ -2166,7 +2181,7 @@
 						</div>
 						<div id="photography01_lightbox_16" class="imageCaptionPair">
 							<div id="photography01_lightbox_16_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/16.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_16_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_16_caption" class="caption">
 								<div>
@@ -2176,7 +2191,7 @@
 						</div>
 						<div id="photography01_lightbox_17" class="imageCaptionPair">
 							<div id="photography01_lightbox_17_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/17.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_17_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_17_caption" class="caption">
 								<div>
@@ -2186,7 +2201,7 @@
 						</div>
 						<div id="photography01_lightbox_18" class="imageCaptionPair">
 							<div id="photography01_lightbox_18_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/18.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_18_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_18_caption" class="caption">
 								<div>
@@ -2196,7 +2211,7 @@
 						</div>
 						<div id="photography01_lightbox_19" class="imageCaptionPair">
 							<div id="photography01_lightbox_19_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/19.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_19_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_19_caption" class="caption">
 								<div>
@@ -2206,7 +2221,7 @@
 						</div>
 						<div id="photography01_lightbox_20" class="imageCaptionPair">
 							<div id="photography01_lightbox_20_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/20.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_20_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_20_caption" class="caption">
 								<div>
@@ -2216,7 +2231,7 @@
 						</div>
 						<div id="photography01_lightbox_21" class="imageCaptionPair">
 							<div id="photography01_lightbox_21_image" class="lightbox_image_div">
-								<img src="files/projects/photography01/21.jpg" class="lightbox_image">
+								<img id="photography01_lightbox_21_src" src="" class="lightbox_image">
 							</div>
 							<div id="photography01_lightbox_21_caption" class="caption">
 								<div>

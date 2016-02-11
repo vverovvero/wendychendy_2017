@@ -208,6 +208,9 @@ function selectSplashPage(){
 		hideAllHeaders();
 		deselectAll();
 		onSplashPage=true;
+
+		//animate background
+		randomColorAnimated();
 	}
 }
 
@@ -829,8 +832,338 @@ function getMax(section){
 	return max;
 }
 
+//////////////////////LOADING DEFERRAL////////////////////////////////
+
+function loadAnimation(){
+	console.log("loading Animation");
+	document.getElementById("animation03_gallery_1").src = "files/projects/animation03/scene_01.jpg"; 
+	document.getElementById("animation03_gallery_2").src = "files/projects/animation03/scene_02.jpg";
+	document.getElementById("animation03_gallery_3").src = "files/projects/animation03/scene_05.jpg";
+	document.getElementById("animation03_gallery_4").src = "files/projects/animation03/scene_06.jpg";
+	document.getElementById("animation03_gallery_5").src = "files/projects/animation03/scene_08.jpg";
+	document.getElementById("animation03_gallery_6").src = "files/projects/animation03/scene_09.jpg";
+	document.getElementById("animation03_gallery_7").src = "files/projects/animation03/scene_10.jpg";
+	document.getElementById("animation03_gallery_8").src = "files/projects/animation03/scene_11.jpg";
+	document.getElementById("animation03_gallery_9").src = "files/projects/animation03/scene_12.jpg";
+}
+
+function loadCode(){
+	console.log("loading code");
+
+	document.getElementById("code01_gallery_1").src = "files/projects/code01/buddha_01.png";
+	document.getElementById("code01_gallery_2").src = "files/projects/code01/buddha_02.png";
+	document.getElementById("code01_gallery_3").src = "files/projects/code01/buddha_03.png";
+	document.getElementById("code01_gallery_4").src = "files/projects/code01/bunny_01.png";
+	document.getElementById("code01_gallery_5").src = "files/projects/code01/bunny_02.png";
+	document.getElementById("code01_gallery_6").src = "files/projects/code01/bunny_03_cropped.jpg";
+	document.getElementById("code01_gallery_7").src = "files/projects/code01/bunny_04.png";
+	document.getElementById("code01_gallery_8").src = "files/projects/code01/bunny_05.png";
+	document.getElementById("code01_gallery_9").src = "files/projects/code01/dragon_01.png";
+	document.getElementById("code01_gallery_10").src = "files/projects/code01/dragon_02.png";
+	document.getElementById("code01_gallery_11").src = "files/projects/code01/dragon_03.png";
+	document.getElementById("code01_gallery_12").src = "files/projects/code01/dragon_04.png";
+	document.getElementById("code01_gallery_13").src = "files/projects/code01/spheres_01.png";
+
+	document.getElementById("code02_gallery_1").src = "files/projects/code02/mockup_desktop/desktop1.jpg";
+	document.getElementById("code02_gallery_2").src = "files/projects/code02/mockup_desktop/desktop2.jpg";
+	document.getElementById("code02_gallery_3").src = "files/projects/code02/mockup_desktop/desktop3.jpg";
+	document.getElementById("code02_gallery_4").src = "files/projects/code02/mockup_desktop/desktop4.jpg";
+	document.getElementById("code02_gallery_5").src = "files/projects/code02/mockup_desktop/desktop5.jpg";
+	document.getElementById("code02_gallery_6").src = "files/projects/code02/mockup_desktop/desktop6.jpg";
+	document.getElementById("code02_gallery_7").src = "files/projects/code02/mockup_desktop/desktop7.jpg";
+	document.getElementById("code02_gallery_8").src = "files/projects/code02/mockup_desktop/desktop8.jpg";
+	document.getElementById("code02_gallery_9").src = "files/projects/code02/mockup_desktop/desktop9.jpg";
+	document.getElementById("code02_gallery_10").src = "files/projects/code02/mockup_desktop/desktop10.jpg";
+	document.getElementById("code02_gallery_11").src = "files/projects/code02/mockup_desktop/desktop11.jpg";
+	document.getElementById("code02_gallery_12").src = "files/projects/code02/mockup_desktop/desktop12.jpg";
+	document.getElementById("code02_gallery_13").src = "files/projects/code02/mockup_mobile/mobile1.jpg";
+	document.getElementById("code02_gallery_14").src = "files/projects/code02/mockup_mobile/mobile2.jpg";
+	document.getElementById("code02_gallery_15").src = "files/projects/code02/mockup_mobile/mobile3.jpg";
+	document.getElementById("code02_gallery_16").src = "files/projects/code02/mockup_mobile/mobile4.jpg";
+	document.getElementById("code02_gallery_17").src = "files/projects/code02/mockup_mobile/mobile5.jpg";
+	document.getElementById("code02_gallery_18").src = "files/projects/code02/mockup_mobile/mobile6.jpg";
+	document.getElementById("code02_gallery_19").src = "files/projects/code02/mockup_mobile/mobile7.jpg";
+	document.getElementById("code02_gallery_20").src = "files/projects/code02/mockup_mobile/mobile8.jpg";
+	
+	document.getElementById("code03_gallery_1").src = "files/projects/code03/a_sample.jpg";
+	document.getElementById("code03_gallery_2").src = "files/projects/code03/b_sample.jpg";
+	document.getElementById("code03_gallery_3").src = "files/projects/code03/c_sample.jpg";
+	document.getElementById("code03_gallery_4").src = "files/projects/code03/d_sample.jpg";
+	document.getElementById("code03_gallery_5").src = "files/projects/code03/e_sample.jpg";
+	document.getElementById("code03_gallery_6").src = "files/projects/code03/f_sample.jpg";
+	document.getElementById("code03_gallery_7").src = "files/projects/code03/g_sample.jpg";
+	document.getElementById("code03_gallery_8").src = "files/projects/code03/h_sample.jpg";
+	document.getElementById("code03_gallery_9").src = "files/projects/code03/i_sample.jpg";
+	document.getElementById("code03_gallery_10").src = "files/projects/code03/j_sample.jpg";
+	document.getElementById("code03_gallery_11").src = "files/projects/code03/k_sample.jpg";
+	document.getElementById("code03_gallery_12").src = "files/projects/code03/l_sample.jpg";
+	document.getElementById("code03_gallery_13").src = "files/projects/code03/m_sample.jpg";
+	document.getElementById("code03_gallery_14").src = "files/projects/code03/n_sample.jpg";
+	document.getElementById("code03_gallery_15").src = "files/projects/code03/o_sample.jpg";
+	document.getElementById("code03_gallery_16").src = "files/projects/code03/p_sample.jpg";
+	document.getElementById("code03_gallery_17").src = "files/projects/code03/q_sample.jpg";
+	document.getElementById("code03_gallery_18").src = "files/projects/code03/r_sample.jpg";
+	document.getElementById("code03_gallery_19").src = "files/projects/code03/s_sample.jpg";
+	document.getElementById("code03_gallery_20").src = "files/projects/code03/t_sample.jpg";
+	document.getElementById("code03_gallery_21").src = "files/projects/code03/u_sample.jpg";
+	document.getElementById("code03_gallery_22").src = "files/projects/code03/v_sample.jpg";
+	document.getElementById("code03_gallery_23").src = "files/projects/code03/w_sample.jpg";
+	document.getElementById("code03_gallery_24").src = "files/projects/code03/x_sample.jpg";
+	document.getElementById("code03_gallery_25").src = "files/projects/code03/y_sample.jpg";
+	document.getElementById("code03_gallery_26").src = "files/projects/code03/z_sample.jpg";
+}
+
+function loadPainting(){
+	console.log("loading Painting");
+
+	document.getElementById("painting01_gallery_1").src = "files/projects/painting01/01.jpg";
+	document.getElementById("painting01_gallery_2").src = "files/projects/painting01/02.jpg";
+	document.getElementById("painting01_gallery_3").src = "files/projects/painting01/03.jpg";
+	document.getElementById("painting01_gallery_4").src = "files/projects/painting01/04.jpg";
+	document.getElementById("painting01_gallery_5").src = "files/projects/painting01/05.jpg";
+	document.getElementById("painting01_gallery_6").src = "files/projects/painting01/06.jpg";
+	document.getElementById("painting01_gallery_7").src = "files/projects/painting01/07.jpg";
+	document.getElementById("painting01_gallery_8").src = "files/projects/painting01/08.jpg";
+	document.getElementById("painting01_gallery_9").src = "files/projects/painting01/09.jpg";
+	document.getElementById("painting01_gallery_10").src = "files/projects/painting01/10.jpg";
+	document.getElementById("painting01_gallery_11").src = "files/projects/painting01/11.jpg";
+	document.getElementById("painting01_gallery_12").src = "files/projects/painting01/12.jpg";
+	document.getElementById("painting01_gallery_13").src = "files/projects/painting01/13.jpg";
+
+	document.getElementById("painting02_gallery_1").src = "files/projects/painting02/01.jpg";
+	document.getElementById("painting02_gallery_2").src = "files/projects/painting02/02.jpg";
+	document.getElementById("painting02_gallery_3").src = "files/projects/painting02/03.jpg";
+	document.getElementById("painting02_gallery_4").src = "files/projects/painting02/04.jpg";
+	document.getElementById("painting02_gallery_5").src = "files/projects/painting02/05.jpg";
+}
+
+function loadDesign(){
+	console.log("loading Design");
+
+	document.getElementById("design01_gallery_1").src = "files/projects/design01/01.jpg";
+	document.getElementById("design01_gallery_2").src = "files/projects/design01/02.jpg";
+	document.getElementById("design01_gallery_3").src = "files/projects/design01/03.jpg";
+	document.getElementById("design01_gallery_4").src = "files/projects/design01/04.jpg";
+	document.getElementById("design01_gallery_5").src = "files/projects/design01/05.jpg";
+	document.getElementById("design01_gallery_6").src = "files/projects/design01/06.jpg";
+	document.getElementById("design01_gallery_7").src = "files/projects/design01/07.jpg";
+	document.getElementById("design01_gallery_8").src = "files/projects/design01/08.jpg";
+	document.getElementById("design01_gallery_9").src = "files/projects/design01/09.jpg";
+	document.getElementById("design01_gallery_10").src = "files/projects/design01/10.jpg";
+	document.getElementById("design01_gallery_11").src = "files/projects/design01/11.jpg";
+	document.getElementById("design01_gallery_12").src = "files/projects/design01/12.jpg";
+
+	document.getElementById("design02_gallery_1").src = "files/projects/design02/01_big.png";
+	document.getElementById("design02_gallery_2").src = "files/projects/design02/02.jpg";
+	document.getElementById("design02_gallery_3").src = "files/projects/design02/03.jpg";
+	document.getElementById("design02_gallery_4").src = "files/projects/design02/04.jpg";
+	document.getElementById("design02_gallery_5").src = "files/projects/design02/05.jpg";
+	document.getElementById("design02_gallery_6").src = "files/projects/design02/06.jpg";
+}
+
+function loadPhotography(){
+	console.log("loading photography");
+
+	document.getElementById("photography01_gallery_1").src = "files/projects/photography01/01.jpg";
+	document.getElementById("photography01_gallery_2").src = "files/projects/photography01/02.jpg";
+	document.getElementById("photography01_gallery_3").src = "files/projects/photography01/03.jpg";
+	document.getElementById("photography01_gallery_4").src = "files/projects/photography01/04.jpg";
+	document.getElementById("photography01_gallery_5").src = "files/projects/photography01/05.jpg";
+	document.getElementById("photography01_gallery_6").src = "files/projects/photography01/06.jpg";
+	document.getElementById("photography01_gallery_7").src = "files/projects/photography01/07.jpg";
+	document.getElementById("photography01_gallery_8").src = "files/projects/photography01/08.jpg";
+	document.getElementById("photography01_gallery_9").src = "files/projects/photography01/09.jpg";
+	document.getElementById("photography01_gallery_10").src = "files/projects/photography01/10.jpg";
+	document.getElementById("photography01_gallery_11").src = "files/projects/photography01/11.jpg";
+	document.getElementById("photography01_gallery_12").src = "files/projects/photography01/12.jpg";
+	document.getElementById("photography01_gallery_13").src = "files/projects/photography01/13.jpg";
+	document.getElementById("photography01_gallery_14").src = "files/projects/photography01/14.jpg";
+	document.getElementById("photography01_gallery_15").src = "files/projects/photography01/15.jpg";
+	document.getElementById("photography01_gallery_16").src = "files/projects/photography01/16.jpg";
+	document.getElementById("photography01_gallery_17").src = "files/projects/photography01/17.jpg";
+	document.getElementById("photography01_gallery_18").src = "files/projects/photography01/18.jpg";
+	document.getElementById("photography01_gallery_19").src = "files/projects/photography01/19.jpg";
+	document.getElementById("photography01_gallery_20").src = "files/projects/photography01/20.jpg";
+	document.getElementById("photography01_gallery_21").src = "files/projects/photography01/21.jpg";
+}
 
 
+////////////////////LOADING LIGHTBOX DEFERRAL//////////////////////////////////////////////
+
+function loadAnimationLight(){
+	console.log("loading animation lightbox");
+
+	document.getElementById("animation03_lightbox_1_src").src = "files/projects/animation03/scene_01.jpg";
+	document.getElementById("animation03_lightbox_2_src").src = "files/projects/animation03/scene_02.jpg";
+	document.getElementById("animation03_lightbox_3_src").src = "files/projects/animation03/scene_05.jpg";
+	document.getElementById("animation03_lightbox_4_src").src = "files/projects/animation03/scene_06.jpg";
+	document.getElementById("animation03_lightbox_5_src").src = "files/projects/animation03/scene_08.jpg";
+	document.getElementById("animation03_lightbox_6_src").src = "files/projects/animation03/scene_09.jpg";
+	document.getElementById("animation03_lightbox_7_src").src = "files/projects/animation03/scene_10.jpg";
+	document.getElementById("animation03_lightbox_8_src").src = "files/projects/animation03/scene_11.jpg";
+	document.getElementById("animation03_lightbox_9_src").src = "files/projects/animation03/scene_12.jpg";
+
+
+}
+
+function loadCodeLight(){
+	console.log("loading code lightbox");
+
+	document.getElementById("code01_lightbox_1_src").src = "files/projects/code01/buddha_01.png";
+	document.getElementById("code01_lightbox_2_src").src = "files/projects/code01/buddha_02.png";
+	document.getElementById("code01_lightbox_3_src").src = "files/projects/code01/buddha_03.png";
+	document.getElementById("code01_lightbox_4_src").src = "files/projects/code01/bunny_01.png";
+	document.getElementById("code01_lightbox_5_src").src = "files/projects/code01/bunny_02.png";
+	document.getElementById("code01_lightbox_6_src").src = "files/projects/code01/bunny_03_cropped.jpg";
+	document.getElementById("code01_lightbox_7_src").src = "files/projects/code01/bunny_04.png";
+	document.getElementById("code01_lightbox_8_src").src = "files/projects/code01/bunny_05.png";
+	document.getElementById("code01_lightbox_9_src").src = "files/projects/code01/dragon_01.png";
+	document.getElementById("code01_lightbox_10_src").src = "files/projects/code01/dragon_02.png";
+	document.getElementById("code01_lightbox_11_src").src = "files/projects/code01/dragon_03.png";
+	document.getElementById("code01_lightbox_12_src").src = "files/projects/code01/dragon_04.png";
+	document.getElementById("code01_lightbox_13_src").src = "files/projects/code01/spheres_01.png";
+
+	document.getElementById("code02_lightbox_1_src").src = "files/projects/code02/mockup_desktop/desktop1.jpg";
+	document.getElementById("code02_lightbox_2_src").src = "files/projects/code02/mockup_desktop/desktop2.jpg";
+	document.getElementById("code02_lightbox_3_src").src = "files/projects/code02/mockup_desktop/desktop3.jpg";
+	document.getElementById("code02_lightbox_4_src").src = "files/projects/code02/mockup_desktop/desktop4.jpg";
+	document.getElementById("code02_lightbox_5_src").src = "files/projects/code02/mockup_desktop/desktop5.jpg";
+	document.getElementById("code02_lightbox_6_src").src = "files/projects/code02/mockup_desktop/desktop6.jpg";
+	document.getElementById("code02_lightbox_7_src").src = "files/projects/code02/mockup_desktop/desktop7.jpg";
+	document.getElementById("code02_lightbox_8_src").src = "files/projects/code02/mockup_desktop/desktop8.jpg";
+	document.getElementById("code02_lightbox_9_src").src = "files/projects/code02/mockup_desktop/desktop9.jpg";
+	document.getElementById("code02_lightbox_10_src").src = "files/projects/code02/mockup_desktop/desktop10.jpg";
+	document.getElementById("code02_lightbox_11_src").src = "files/projects/code02/mockup_desktop/desktop11.jpg";
+	document.getElementById("code02_lightbox_12_src").src = "files/projects/code02/mockup_desktop/desktop12.jpg";
+	document.getElementById("code02_lightbox_13_src").src = "files/projects/code02/mockup_mobile/mobile1.jpg";
+	document.getElementById("code02_lightbox_14_src").src = "files/projects/code02/mockup_mobile/mobile2.jpg";
+	document.getElementById("code02_lightbox_15_src").src = "files/projects/code02/mockup_mobile/mobile3.jpg";
+	document.getElementById("code02_lightbox_16_src").src = "files/projects/code02/mockup_mobile/mobile4.jpg";
+	document.getElementById("code02_lightbox_17_src").src = "files/projects/code02/mockup_mobile/mobile5.jpg";
+	document.getElementById("code02_lightbox_18_src").src = "files/projects/code02/mockup_mobile/mobile6.jpg";
+	document.getElementById("code02_lightbox_19_src").src = "files/projects/code02/mockup_mobile/mobile7.jpg";
+	document.getElementById("code02_lightbox_20_src").src = "files/projects/code02/mockup_mobile/mobile8.jpg";
+
+	document.getElementById("code03_lightbox_1_src").src = "files/projects/code03/a_sample.jpg";
+	document.getElementById("code03_lightbox_2_src").src = "files/projects/code03/b_sample.jpg";
+	document.getElementById("code03_lightbox_3_src").src = "files/projects/code03/c_sample.jpg";
+	document.getElementById("code03_lightbox_4_src").src = "files/projects/code03/d_sample.jpg";
+	document.getElementById("code03_lightbox_5_src").src = "files/projects/code03/e_sample.jpg";
+	document.getElementById("code03_lightbox_6_src").src = "files/projects/code03/f_sample.jpg";
+	document.getElementById("code03_lightbox_7_src").src = "files/projects/code03/g_sample.jpg";
+	document.getElementById("code03_lightbox_8_src").src = "files/projects/code03/h_sample.jpg";
+	document.getElementById("code03_lightbox_9_src").src = "files/projects/code03/i_sample.jpg";
+	document.getElementById("code03_lightbox_10_src").src = "files/projects/code03/j_sample.jpg";
+	document.getElementById("code03_lightbox_11_src").src = "files/projects/code03/k_sample.jpg";
+	document.getElementById("code03_lightbox_12_src").src = "files/projects/code03/l_sample.jpg";
+	document.getElementById("code03_lightbox_13_src").src = "files/projects/code03/m_sample.jpg";
+	document.getElementById("code03_lightbox_14_src").src = "files/projects/code03/n_sample.jpg";
+	document.getElementById("code03_lightbox_15_src").src = "files/projects/code03/o_sample.jpg";
+	document.getElementById("code03_lightbox_16_src").src = "files/projects/code03/p_sample.jpg";
+	document.getElementById("code03_lightbox_17_src").src = "files/projects/code03/q_sample.jpg";
+	document.getElementById("code03_lightbox_18_src").src = "files/projects/code03/r_sample.jpg";
+	document.getElementById("code03_lightbox_19_src").src = "files/projects/code03/s_sample.jpg";
+	document.getElementById("code03_lightbox_20_src").src = "files/projects/code03/t_sample.jpg";
+	document.getElementById("code03_lightbox_21_src").src = "files/projects/code03/u_sample.jpg";
+	document.getElementById("code03_lightbox_22_src").src = "files/projects/code03/v_sample.jpg";
+	document.getElementById("code03_lightbox_23_src").src = "files/projects/code03/w_sample.jpg";
+	document.getElementById("code03_lightbox_24_src").src = "files/projects/code03/x_sample.jpg";
+	document.getElementById("code03_lightbox_25_src").src = "files/projects/code03/y_sample.jpg";
+	document.getElementById("code03_lightbox_26_src").src = "files/projects/code03/z_sample.jpg";
+}
+
+function loadPaintingLight(){
+	console.log("loading painting lightbox");
+
+	document.getElementById("painting01_lightbox_1_src").src = "files/projects/painting01/01.jpg";
+	document.getElementById("painting01_lightbox_2_src").src = "files/projects/painting01/02.jpg";
+	document.getElementById("painting01_lightbox_3_src").src = "files/projects/painting01/03.jpg";
+	document.getElementById("painting01_lightbox_4_src").src = "files/projects/painting01/04.jpg";
+	document.getElementById("painting01_lightbox_5_src").src = "files/projects/painting01/05.jpg";
+	document.getElementById("painting01_lightbox_6_src").src = "files/projects/painting01/06.jpg";
+	document.getElementById("painting01_lightbox_7_src").src = "files/projects/painting01/07.jpg";
+	document.getElementById("painting01_lightbox_8_src").src = "files/projects/painting01/08.jpg";
+	document.getElementById("painting01_lightbox_9_src").src = "files/projects/painting01/09.jpg";
+	document.getElementById("painting01_lightbox_10_src").src = "files/projects/painting01/10.jpg";
+	document.getElementById("painting01_lightbox_11_src").src = "files/projects/painting01/11.jpg";
+	document.getElementById("painting01_lightbox_12_src").src = "files/projects/painting01/12.jpg";
+	document.getElementById("painting01_lightbox_13_src").src = "files/projects/painting01/13.jpg";
+
+	document.getElementById("painting02_lightbox_1_src").src = "files/projects/painting02/01.jpg";
+	document.getElementById("painting02_lightbox_2_src").src = "files/projects/painting02/02.jpg";
+	document.getElementById("painting02_lightbox_3_src").src = "files/projects/painting02/03.jpg";
+	document.getElementById("painting02_lightbox_4_src").src = "files/projects/painting02/04.jpg";
+	document.getElementById("painting02_lightbox_5_src").src = "files/projects/painting02/05.jpg";
+
+}
+
+function loadDesignLight(){
+	console.log("loading design lightbox");
+
+	document.getElementById("design01_lightbox_1_src").src = "files/projects/design01/01.jpg";
+	document.getElementById("design01_lightbox_2_src").src = "files/projects/design01/02.jpg";
+	document.getElementById("design01_lightbox_3_src").src = "files/projects/design01/03.jpg";
+	document.getElementById("design01_lightbox_4_src").src = "files/projects/design01/04.jpg";
+	document.getElementById("design01_lightbox_5_src").src = "files/projects/design01/05.jpg";
+	document.getElementById("design01_lightbox_6_src").src = "files/projects/design01/06.jpg";
+	document.getElementById("design01_lightbox_7_src").src = "files/projects/design01/07.jpg";
+	document.getElementById("design01_lightbox_8_src").src = "files/projects/design01/08.jpg";
+	document.getElementById("design01_lightbox_9_src").src = "files/projects/design01/09.jpg";
+	document.getElementById("design01_lightbox_10_src").src = "files/projects/design01/10.jpg";
+	document.getElementById("design01_lightbox_11_src").src = "files/projects/design01/11.jpg";
+	document.getElementById("design01_lightbox_12_src").src = "files/projects/design01/12.jpg";
+
+	document.getElementById("design02_lightbox_1_src").src = "files/projects/design02/01_big.png";
+	document.getElementById("design02_lightbox_2_src").src = "files/projects/design02/02.jpg";
+	document.getElementById("design02_lightbox_3_src").src = "files/projects/design02/03.jpg";
+	document.getElementById("design02_lightbox_4_src").src = "files/projects/design02/04.jpg";
+	document.getElementById("design02_lightbox_5_src").src = "files/projects/design02/05.jpg";
+	document.getElementById("design02_lightbox_6_src").src = "files/projects/design02/06.jpg";
+}
+
+function loadPhotographyLight(){
+	console.log("loading photography lightbox");
+
+	document.getElementById("photography01_lightbox_1_src").src = "files/projects/photography01/01.jpg";
+	document.getElementById("photography01_lightbox_2_src").src = "files/projects/photography01/02.jpg";
+	document.getElementById("photography01_lightbox_3_src").src = "files/projects/photography01/03.jpg";
+	document.getElementById("photography01_lightbox_4_src").src = "files/projects/photography01/04.jpg";
+	document.getElementById("photography01_lightbox_5_src").src = "files/projects/photography01/05.jpg";
+	document.getElementById("photography01_lightbox_6_src").src = "files/projects/photography01/06.jpg";
+	document.getElementById("photography01_lightbox_7_src").src = "files/projects/photography01/07.jpg";
+	document.getElementById("photography01_lightbox_8_src").src = "files/projects/photography01/08.jpg";
+	document.getElementById("photography01_lightbox_9_src").src = "files/projects/photography01/09.jpg";
+	document.getElementById("photography01_lightbox_10_src").src = "files/projects/photography01/10.jpg";
+	document.getElementById("photography01_lightbox_11_src").src = "files/projects/photography01/11.jpg";
+	document.getElementById("photography01_lightbox_12_src").src = "files/projects/photography01/12.jpg";
+	document.getElementById("photography01_lightbox_13_src").src = "files/projects/photography01/13.jpg";
+	document.getElementById("photography01_lightbox_14_src").src = "files/projects/photography01/14.jpg";
+	document.getElementById("photography01_lightbox_15_src").src = "files/projects/photography01/15.jpg";
+	document.getElementById("photography01_lightbox_16_src").src = "files/projects/photography01/16.jpg";
+	document.getElementById("photography01_lightbox_17_src").src = "files/projects/photography01/17.jpg";
+	document.getElementById("photography01_lightbox_18_src").src = "files/projects/photography01/18.jpg";
+	document.getElementById("photography01_lightbox_19_src").src = "files/projects/photography01/19.jpg";
+	document.getElementById("photography01_lightbox_20_src").src = "files/projects/photography01/20.jpg";
+	document.getElementById("photography01_lightbox_21_src").src = "files/projects/photography01/21.jpg";
+}
+
+//////////////////////LOADING TIMEOUT//////////////////////////////////////////////////////
+
+function loadAllImages(){
+	console.log("loadAllImages called!");
+	setTimeout(function(){ loadAnimation(); }, 500);
+	setTimeout(function(){ loadCode(); }, 1000);
+	setTimeout(function(){ loadPainting(); }, 1500);
+	setTimeout(function(){ loadDesign(); }, 2000);
+	setTimeout(function(){ loadPhotography(); }, 2500);
+
+	setTimeout(function(){ loadAnimationLight(); }, 3000);
+	setTimeout(function(){ loadCodeLight(); }, 3500);
+	setTimeout(function(){ loadPaintingLight(); }, 4000);
+	setTimeout(function(){ loadDesignLight(); }, 4500);
+	setTimeout(function(){ loadPhotographyLight(); }, 5000);
+
+}
 
 
 
