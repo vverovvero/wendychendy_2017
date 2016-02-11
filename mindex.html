@@ -2,18 +2,331 @@
 <html>
 	<head>
 		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
-		<title> wendychendy </title>
+		<title> wendychendy mobile </title>
+
+		<link rel="canonical" href="index.html">
+
+		<script type="text/javascript">
+		<!--
+		if (screen.width > 640) {
+		document.location = "index.html";
+		}
+		//-->
+		</script>
+
 		<script src="js/mscript.js"></script>
 
 		<link href='https://fonts.googleapis.com/css?family=Lato:900,700,300,300italic,400|Covered+By+Your+Grace|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" type="text/css" href="css/mobile/mstyleSplash.css" media="only screen and (max-device-width: 480px)">
-
-		<link rel="canonical" href="index.html">
-		<link rel="alternate" media="only screen and (min-device-width: 480px)" href="index.html">
+		<link rel="stylesheet" type="text/css" href="css/mobile/mstyle.css" media="only screen and (max-device-width: 640px)">
+		
 	</head>
 
 	<body>
-		Mobile version
+		<div id="container">
+
+			<div id="navbar">
+				<div onclick="">Menu</div>
+				<div id="menu_dropdown" class="showDrop">
+					<div id="menu1" onclick="">HOME</div>
+					<div id="menu2" onclick="">ABOUT</div>
+					<div id="menu3" onclick="">WORK +</div>
+					<div id="work_dropdown">
+						<div id="work1" onclick"">Animation +</div>
+						<div id="animation_dropdown">
+							<div id="animation1">where i'll go</div>
+							<div id="animation2">revised scenes (where i'll go)</div>
+							<div id="animation3">selected stills (where i'll go)</div>
+							<div id="animation4">disney</div>
+						</div>
+						<div id="work2" onclick"">Code +</div>
+						<div id="code_dropdown">
+							<div id="code1">raytracer</div>
+							<div id="code2">portfolio site</div>
+							<div id="code3">typesketch</div>
+						</div>
+						<div id="work3" onclick"">Painting +</div>
+						<div id="painting_dropdown">
+							<div id="painting1">assorted portraits</div>
+							<div id="design1">fantasy landscapes</div>
+						</div>
+						<div id="work4" onclick"">Design +</div>
+						<div id="design_dropdown">
+							<div id="design1">assorted posters</div>
+							<div id="design2">copybot</div>
+						</div>
+						<div id="work5" onclick"">Photography</div>
+						<div id="photography_dropdown">
+							<div id="photography1">assorted photos</div>
+						</div>
+					</div>
+					<div id="menu4" onclick="">RESUME</div>
+					<div id="menu5" onclick="">CONTACT</div>
+				</div>
+			</div>
+
+			<div id="SPLASH">
+				<div id="splash_image">
+					<img id="splash_image_src" src="files/icons/piggy_black.svg" alt="piggy" style="width: 200px">
+				</div>
+				<div id="splash_body">
+					<div id="splash_name">WENDY CHEN</div>
+					<div id="splash_tagline">PICTURES & CODE</div>
+				</div>
+			</div>
+
+			<div id="ABOUT">
+				<div class="section_title">ABOUT</div>
+				<div class="section_body">
+					<div class="body_title">HELLO! (OINK)</div>
+					<div class="body_content">
+						Hi, my name is Wendy. I love art. I love coding. I am passionate about how computer science and visual art can be combined, because at their core, they are both about creation and problem solving.
+						<br>
+						I am pursuing a B.S. in Computer Science at Yale University, and I previously worked as an Art & Production Intern at Walt Disney Animation Studios.
+						<br>
+						I love a challenge, I love animated movies, and I love sunny and beautiful southern California, my home.
+						<br>
+						Currently, I want to pursue studies in computer graphics. I want to shape the world we see because so much of our experience is rooted in vision, and by shaping what we see, I can all the more shape what we imagine, think, and feel.
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_ANIMATION1">
+				<div class="gallery_title">WHERE I'LL GO</div>
+				<div class="gallery_description">
+					"Where I'll Go" is an animatic about environments, atmosphere, and world-building.
+				</div>
+				<div class="gallery">
+					<div class="gallery_video">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_ANIMATION2">
+				<div class="gallery_title">REVISED SCENES (WHERE I'LL GO)</div>
+				<div class="gallery_description">
+					"Looking Under" is a character animation test created as an extension of the last shot from "Where I'll Go". The focus of the test is on overlapping actions and follow through of the character's limbs and hair. Reference video found here [x].
+				</div>
+				<div class="gallery">
+					<div class="gallery_video">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_ANIMATION3">
+				<div class="gallery_title">SELECTED STILLS (WHERE I'LL GO)</div>
+				<div class="gallery_description">
+					Selected stills and backgrounds from “Where I’ll Go.”
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_ANIMATION4">
+				<div class="gallery_title">DISNEY</div>
+				<div class="gallery_description">
+					Permission to show work is pending. Currently no preview available. Please contact me to learn more about my work at Walt Disney Animation Studios.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_CODE1">
+				<div class="gallery_title">RAYTRACER</div>
+				<div class="gallery_description">
+					The following gallery of high-res images were created using my accelerated raytracer. Acceleration was obtained through implementation of k-d tree. See github for code and demo.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_CODE2">
+				<div class="gallery_title">PORTFOLIO SITE</div>
+				<div class="gallery_description">
+					Image gallery of original desktop and mobile website mockups. Several pages feature alternate designs that were not implemented. This portfolio site (wendychendy) was designed and coded by me. Find source code on github.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_CODE3">
+				<div class="gallery_title">TYPESKETCH</div>
+				<div class="gallery_description">
+					Typesketch is an simple, fun online typography tool. This gallery contains samples of fonts that can be created using typesketch. See github for code and demo. Hover over demo icons for instructions. Ghost mode provides layer-like functionality.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_PAINTING1">
+				<div class="gallery_title">ASSORTED PORTRAITS</div>
+				<div class="gallery_description">
+					Selected portraits of family, friends, and self. Done in acrylic.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_PAINTIN2">
+				<div class="gallery_title">FANTASY LANDSCAPES</div>
+				<div class="gallery_description">
+					Abstract landscapes inspired by Max Ernst's paris dream. The first painting in the series is a copy of the original, and the rest of the paintings are inspired.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_DESIGN1">
+				<div class="gallery_title">ASSORTED POSTERS</div>
+				<div class="gallery_description">
+					Assorted event posters and typography exercises.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_DESIGN2">
+				<div class="gallery_title">COPYBOT</div>
+				<div class="gallery_description">
+					Design work for 'copybot' museum exhibit, done for Yale Social Robotics Lab.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="WORK_PHOTOGRAPHY1">
+				<div class="gallery_title">ASSORTED PHOTOGRAPHS</div>
+				<div class="gallery_description">
+					Assortment of photos, day-to-day observations, reinvented vanitas, macro shots.
+				</div>
+				<div class="gallery">
+					<div class="gallery_image">
+						<img id="animation3_1" src="">
+					</div>
+				</div>
+			</div>
+
+			<div id="RESUME">
+				<div class="section_title">RESUME</div>
+				<div class="section_body">
+					<div class="resume_section">
+						<div class="resume_section_title">EDUCATION</div>
+						<div class="resume_item_title">
+							YALE UNIVERSITY <br> B.S. Computer Science // New Haven, CT, 2013 - present
+						</div>
+						<div class="resume_item_content">
+							Expected graduation May 2017. 3.64 GPA. Pursuing studies in computer graphics and visual arts. Completed courses in systems programming, data structures, algorithms, computer graphics, discrete mathematics, linear algerbra, animation, painting, photography, graphic design, drawing. Currently taking courses in parallel programming, software engineering, 3D fabrication.
+						</div>
+					</div>
+					<div class="resume_section">
+						<div class="resume_section_title">EXPERIENCE</div>
+						<div class="resume_item_title">
+							YALE COMPUTER GRAPHICS LAB <br> Research Assistant // New Haven, CT, Spring 2016 - present
+						</div>
+						<div class="resume_item_content">
+							Assists in data collection and testing for 3D sketching software developed by the lab. Advisors: Professor Julie Dorsey, Professor Holly Rushmeier, Dr. Victoria Rudakova.
+						</div>
+						<div class="resume_item_title">
+							ARCH 009/CPSC 078 SEE IT, CHANGE IT, MAKE IT <br> Peer Tutor // New Haven, CT, Spring 2016 - present
+						</div>
+						<div class="resume_item_content">
+							Undergraduate teaching assistant for Professor Julie Dorsey’s interdisciplinary freshman seminar on architecture and 3D computer graphics. Assists in-class demos and holds office hours.
+						</div>
+						<div class="resume_item_title">
+							WALT DISNEY ANIMATION STUDIOS <br> Art & Production Intern // Burbank, CA, June 2015 - August 2015
+						</div>
+						<div class="resume_item_content">
+							Created short film “Brew” with team of interns. Film was an Indiana Jones style story about a teabag who escapes capture from teacups and their ruling teapot. Learned CG animation production pipe- line using Maya and Disney’s proprietary tools. Textured 3D models and animated shots. Specialized in look development of main assets, including the teabag and teapot.
+						</div>
+						<div class="resume_item_title">
+							YALE SOCIAL ROBOTICS LAB <br> Student Researcher // New Haven, CT, May 2015 - June 2015
+						</div>
+						<div class="resume_item_content">
+							Programmed MyKeepOn robot idling animations. Created preliminary designs for museum exhibit showcasing human-robot interaction through the use of toy robots that mimic the viewer’s move- ments. Set up and maintained 3D printer.
+						</div>
+					</div>
+					<div class="resume_section">
+						<div class="resume_section_title">PORTFOLIO</div>
+						<div class="resume_item_title">
+							www.wendychendy.com
+						</div>
+						<div class="resume_item_content">
+							Self-designed and programmed an online portfolio for animation, code, painting, graphic design, and photography.
+						</div>
+						<div class="resume_item_title">
+							https://github.com/vverovvero
+						</div>
+						<div class="resume_item_content">
+							Repository of project source code, and samples of C code written for coursework.
+						</div>
+					</div>
+					<div class="resume_section">
+						<div class="resume_section_title">SKILLS</div>
+						<div class="resume_item_title">
+							PROGRAMMING LANGUAGES
+						</div>
+						<div class="resume_item_content">
+							C, HTML, CSS, JavaScript, Python, Racket
+						</div>
+						<div class="resume_item_title">
+							SOFTWARE
+						</div>
+						<div class="resume_item_content">
+							Photoshop, Illustrator, InDesign, Maya
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="CONTACT">
+				<div class="section_title">CONTACT</div>
+				<div class="section_body">
+					<div class="body_title">SEND ME STUFF</div>
+					<div class="body_content">
+						206 Elm St, Unit 201656 <br>
+						New Haven, CT 06520
+					</div>
+					<div class="body_title">PHONE</div>
+					<div class="body_content">
+						(818) 519 - 1573
+					</div>
+					<div class="body_title">E-MAIL</div>
+					<div class="body_content">
+						wendy.w.chen@yale.edu
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
 	</body>
 </html>
