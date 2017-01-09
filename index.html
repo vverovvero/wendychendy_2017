@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html>
+  <title>wendychendyW3_v2</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <ul class="w3-navbar w3-text-white" id="myNavbar">
+      <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+        <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+      <li class="w3-left-align w3-hide-large w3-hide-medium"><a href="#home"><img id="home_piggy" class="piggy-icon" src="files/icons/piggy_white.svg"></img></a></li>
+      <li class="w3-left-align w3-hide-small"><a href="#home">HOME</a></li>
+      <li class="w3-hide-small"><a href="#about"><i class="fa fa-user"></i> ABOUT</a></li>
+      <li class="w3-hide-small"><a href="#reel"><i class="fa fa-film"></i> REEL</a></li>
+      <li class="w3-hide-small"><a href="#work"><i class="fa fa-th"></i> WORK</a></li>
+      <li class="w3-hide-small"><a href="#resume"><i class="fa fa-file-text-o"></i> RESUME</a></li>
+    </ul>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+      <ul class="w3-navbar w3-left-align w3-white">
+        <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
+        <li><a href="#reel" onclick="toggleFunction()">REEL</a></li>
+        <li><a href="#work" onclick="toggleFunction()">WORK</a></li>
+        <li><a href="#resume" onclick="toggleFunction()">RESUME</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-middle w3-padding-large logo-border w3-card-2">
+      <!-- Splash box for small screen -->
+      <div class="w3-center w3-container">
+         <span class="w3-center w3-xlarge w3-wide"><h2>WENDY CHEN</h2></span>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <p class="w3-center"><em>I am a developer and artist, seeking creative challenges.</em></p>
+    <div class="w3-row">
+      <div class="w3-col m6  w3-padding-large">
+        <img src="files/images/me_huntington.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me at the Huntington" width="500" height="333">
+      </div>
+      <div class="w3-col m6 w3-padding-medium">
+        <p>
+        Hi, my name is Wendy. I love art. I love coding. I am passionate about how computer science and visual art can be combined, because at their core, they are both about creation and problem solving.
+        </p>
+        <p>
+        I am expecting to graduate from Yale University with a B.S. in Computer Science in May 2017.  I have worked as an Art & Production Intern at Walt Disney Animation Studios and as a Production Engineering Intern at Blue Sky Studios.
+        </p>
+        <!-- Hide this text on small devices -->
+        <p class="w3-hide-small">
+        Being able to combine a technical understanding with an artistic eye, I am ready to create something we've never seen before. The last limit is just my imagination.  I want to shape the world we see because so much of our experience is rooted in vision, and by shaping what we see, I can all the more shape what we imagine, think, and feel.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Parallax Image with REEL Text -->
+  <div class="bgimg-2 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-light-grey w3-wide">REEL</span>
+    </div>
+  </div>
+
+  <!-- Container (REEL Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="reel">
+    <h3 class="w3-center">REEL</h3>
+    <p class="w3-center"><em>Winter 2016 Demo Reel.<br>Password: chendy</em></p>
+    <div class="w3-center w3-row">
+      <div class='embed-container'><iframe src='https://player.vimeo.com/video/197571244' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with WORK Text -->
+  <div class="bgimg-3 w3-display-container">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-light-grey w3-wide">WORK</span>
+    </div>
+  </div>
+
+  <!-- Container (WORK Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="work">
+    <h3 class="w3-center">WORK</h3>
+    <p class="w3-center"><em>My projects span the spectrum from coding to painting.<br> Click on the images for more information.</em></p><br>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <!-- Thumb 1: Disney -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_disney.png" style="width:100%" onclick="onClick('modal01')" class="w3-hover-opacity thumbnail_img" alt="Disney">
+        <div class="w3-display-middle w3-large thumbnail_text">DISNEY</div>
+      </div>
+      <!-- Thumb 2: Blue Sky-->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_bluesky.png" style="width:100%" onclick="onClick('modal02')" class="w3-hover-opacity thumbnail_img" alt="Blue Sky">
+        <div class="w3-display-middle w3-large thumbnail_text">BLUE SKY</div>
+      </div>
+      <!-- Thumb 3: Where I'll Go and Looking Under -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_animation.png" style="width:100%" onclick="onClick('modal03')" class="w3-hover-opacity thumbnail_img" alt="Where I'll Go">
+        <div class="w3-display-middle w3-large thumbnail_text">WHERE I'LL GO</div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+      <!-- Thumb 4: Don't Blink -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_db.png" style="width:100%" onclick="onClick('modal04')" class="w3-hover-opacity thumbnail_img" alt="Don't Blink">
+        <div class="w3-display-middle w3-large thumbnail_text">DON'T BLINK</div>
+      </div>
+      <!-- Thumb 5: mCertiKos -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_os.png" style="width:100%" onclick="onClick('modal05')" class="w3-hover-opacity thumbnail_img" alt="OS video mode">
+        <div class="w3-display-middle w3-large thumbnail_text"><br>VIDEO<br>MODE<br>MCERTIKOS</div>
+      </div>
+      <!-- Thumb 6: Ray Tracing and Path Tracing -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_graphics.png" style="width:100%" onclick="onClick('modal06')" class="w3-hover-opacity thumbnail_img" alt="Rendering">
+        <div class="w3-display-middle w3-large thumbnail_text">RENDERING</div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+      <!-- Thumb 7: Distributed Graph -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_graph.png" style="width:100%" onclick="onClick('modal07')" class="w3-hover-opacity thumbnail_img" alt="Distributed Graph">
+        <div class="w3-display-middle w3-large thumbnail_text">DISTRIBUTED GRAPH</div>
+      </div>
+      <!-- Thumb 8: Painting -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_painting.png" style="width:100%" onclick="onClick('modal08')" class="w3-hover-opacity thumbnail_img" alt="Painting">
+        <div class="w3-display-middle w3-large thumbnail_text">PAINTING</div>
+      </div>
+      <!-- Thumb 9: Design -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_design.png" style="width:100%" onclick="onClick('modal09')" class="w3-hover-opacity thumbnail_img" alt="Design">
+        <div class="w3-display-middle w3-large thumbnail_text">DESIGN</div>
+      </div>
+    </div>  
+
+    <div class="w3-row-padding w3-center w3-section w3-hide" id="gallery_row3">
+      <!-- Thumb 10: Photography  -->
+      <div class="w3-col m4 w3-display-container">
+        <img src="files/workThumbnails/tb_photo.png" style="width:100%" onclick="onClick('modal10')" class="w3-hover-opacity thumbnail_img" alt="Photography">
+        <div class="w3-display-middle w3-large thumbnail_text">PHOTOGRAPHY</div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+    <button class="w3-btn w3-light-grey w3-padding-xlarge" id="gallery_button" onclick="toggleGallery()" style="margin-top:64px">SHOW MORE</button>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <!-- Modal 1: Disney -->
+  <div id="modal01" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal01')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">DISNEY</h3>
+      <p class="w3-center"><em>Selected shots, summer 2015.<br>Password: chendy</em></p>
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-bg-alpha-100'><iframe src='https://player.vimeo.com/video/197583926' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Blue Sky -->
+  <div id="modal02" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal02')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">BLUE SKY</h3>
+      <p class="w3-center"><em>Geometry reduction tool, summer 2016.<br>Deployed for production use, fall 2016.</em></p>
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-bg-alpha-100'><iframe src='https://player.vimeo.com/video/197583634' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Where I'll Go -->
+  <div id="modal03" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal03')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">WHERE I'LL GO</h3>
+      <p class="w3-center"><em>2D animation, winter 2015.<br> Focuses on environments, world-building, and atmosphere.</em></p>
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-bg-alpha-100'><iframe src='https://player.vimeo.com/video/153717699' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+      <br>
+      <h4 class="w3-center">REVISED ANIMATION TEST</h4>
+      <p class="w3-center"><em>Swimming animation test, winter 2015.<br> Set in the world from "Where I'll Go".</em></p>
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-opacity-off w3-white'><iframe src='https://player.vimeo.com/video/153717864' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+  </div>  
+
+  <!-- Modal 4: Don't Blink -->
+  <div id="modal04" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal04')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">DON'T BLINK</h3>
+      <p class="w3-center"><em>Virtual Reality horror game, spring 2016.<br>For implementation details, please see the <b><a class="w3-hover-pink" href="https://vverovvero.github.io/CPSC-439-index/"> project documentation</a></b>.</em></p> 
+
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-bg-alpha-100'><iframe src='https://player.vimeo.com/video/197707757' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Don't Blink -->
+  <div id="modal05" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal05')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">VIDEO MODE IN MCERTIKOS</h3>
+      <p class="w3-center"><em>Enabling video mode in mCertiKOS, fall 2016.<br>For implementation details, please see the <b><a class="w3-hover-pink" href="https://vverovvero.github.io/CPSC-422-index/"> project documentation</a></b>.</em></p> 
+
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-bg-alpha-100'><iframe src='https://player.vimeo.com/video/197585376' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6: Rendering -->
+  <div id="modal06" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal06')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">RENDERING</h3>
+      <p class="w3-center">
+        <em>
+          <a class="w3-hover-pink" href="https://vverovvero.github.io/CPSC-290-index/"> Accelerated ray tracer</a></b>, fall 2015. &nbsp
+          <a class="w3-hover-pink" href="https://vverovvero.github.io/CPSC-424-index/"> GPU ray tracer</a></b>, spring 2016. &nbsp
+          <a class="w3-hover-pink" href="https://vverovvero.github.io/cs490fa-index/"> Unidirectional path tracer</a></b>, fall 2016. <br>
+          Images shown below were produced from the above ray tracing and path tracing projects. <br>
+          Click image to expand.
+        </em>
+      </p> 
+
+      <div class="w3-center w3-row">
+        <div class="w3-row w3-gallery" style="margin-bottom:128px">
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/buddha_01.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Happy buddha, glossy red material.  100,010 triangles.">    
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/bunny_03.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford bunny, gold material.  69,676 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/dragon_04.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford dragon, glass material.  100,016 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/bunny_04.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford bunny, matte pink material.  69,676 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/dragon_02.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford dragon, mirror material.  100,016 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/buddha_03.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Happy buddha, matte pink material.  100,010 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/bunny_02.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford bunny, glass material.  69,676 triangles.">
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/dragon_01.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford dragon, glossy green material.  100,016 triangles."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/bunny_01.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford bunny, shiny aquamarine material.  69,676 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/buddha_02.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Happy buddha, glossy green material.  100,010 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/dragon_03.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford dragon, glossy red material.  100,016 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/raytracer_accelerated/bunny_05.jpg" onclick="onClickLightbox(this)" alt="Accelerated ray tracer.  Stanford bunny, shiny red material.  69,676 triangles.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/pathtracer_uni/img_direct.jpg" onclick="onClickLightbox(this)" alt="Unidirectional path tracer: Direct lighting only.">
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/pathtracer_uni/img_all.jpg" onclick="onClickLightbox(this)" alt="Unidirectional path tracer: All lighting (direct, indirect, russian roulette).">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/pathtracer_uni/img_indirect.jpg" onclick="onClickLightbox(this)" alt="Unidirectional path tracer: Indirect lighting and russian roulette only.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/pathtracer_uni/img_noroulette.jpg" onclick="onClickLightbox(this)" alt="Unidirectional path tracer: Direct and indirect lighting, no russian roulette.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/pathtracer_uni/img_fun1.jpg" onclick="onClickLightbox(this)" alt="Unidirectional path tracer: All lighting for scene with multi-colored lights.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/pathtracer_uni/img_fun2.jpg" onclick="onClickLightbox(this)" alt="Unidirectional path tracer: All lighting for physically implausible scene with floating spheres, multi-colored lights.">
+          </div>
+        </div>
+        <div class="w3-row-padding w3-center w3-section">
+          <button class="w3-btn w3-dark-grey w3-padding-xlarge" id="gallery_button" onclick="closeModal('modal06')" style="margin-top:64px">CLOSE GALLERY</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Modal 7: Distributed Graph -->
+  <div id="modal07" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal07')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">DISTRIBUTED GRAPH</h3>
+      <p class="w3-center"><em>Four iterations of a graph store service, fall 2016.<br>For implementation details, please see the <b><a class="w3-hover-pink" href="https://vverovvero.github.io/CPSC-426-index/"> project documentation</a></b>.</em></p> 
+
+      <div class="w3-center w3-row">
+        <div class='embed-container w3-bg-alpha-100'><iframe src='https://player.vimeo.com/video/198164646' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals 8: Painting -->
+  <div id="modal08" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal08')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">PAINTING</h3>
+      <p class="w3-center">
+        <em>
+          Assorted paintings in acrylic and oil.<br>
+          Click image to expand.
+        </em>
+      </p> 
+
+      <div class="w3-center w3-row">
+        <div class="w3-row w3-gallery" style="margin-bottom:128px">
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/01.jpg" onclick="onClickLightbox(this)" alt="Portrait of my brother.">    
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/03.jpg" onclick="onClickLightbox(this)" alt="Portrait of my mother.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/mini2.jpg" onclick="onClickLightbox(this)" alt="Miniature self-portrait.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/07.jpg" onclick="onClickLightbox(this)" alt="Portrait of my father."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/09.jpg" onclick="onClickLightbox(this)" alt="Portrait of my maternal grandmother.">   
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/11.jpg" onclick="onClickLightbox(this)" alt="Self-portrait.">    
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/12.jpg" onclick="onClickLightbox(this)" alt="Portrait of my Michael Jackson.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/05.jpg" onclick="onClickLightbox(this)" alt="Portrait of my brother.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/13.jpg" onclick="onClickLightbox(this)" alt="Deconstruction of Caravaggio's 'Calling of Saint Matthew.'">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral2.jpg" onclick="onClickLightbox(this)" alt="Flowers in the light, 2.">
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_abstract/01.jpg" onclick="onClickLightbox(this)" alt="Master copy of Max Ernst's 'Paris Dream.'">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/02.jpg" onclick="onClickLightbox(this)" alt="Portrait of my paternal grandmother.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/08.jpg" onclick="onClickLightbox(this)" alt="Portrait of my maternal grandfather.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_abstract/02.jpg" onclick="onClickLightbox(this)" alt="Pink and blue buildings inspired by Max Ernst's 'Paris Dream.'"> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral6.jpg" onclick="onClickLightbox(this)" alt="Flowers in the dark, 2.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_abstract/04.jpg" onclick="onClickLightbox(this)" alt="Floral spotlights inspired by Max Ernst's 'Paris Dream.'"> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_abstract/05.jpg" onclick="onClickLightbox(this)" alt="Tree and mountains inspired by Max Ernst's 'Paris Dream.'"> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/04.jpg" onclick="onClickLightbox(this)" alt="Self-portrait."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral4.jpg" onclick="onClickLightbox(this)" alt="Flowers in the light, 4.">
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/10.jpg" onclick="onClickLightbox(this)" alt="Portrait of my headmaster."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/mini1.jpg" onclick="onClickLightbox(this)" alt="Miniature portrait of a friend.  Hand for scale.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings/06.jpg" onclick="onClickLightbox(this)" alt="Portrait of my father."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral5.jpg" onclick="onClickLightbox(this)" alt="Flowers in the dark, 1.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_abstract/03.jpg" onclick="onClickLightbox(this)" alt="Floating library inspired by Max Ernst's 'Paris Dream.'"> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral7.jpg" onclick="onClickLightbox(this)" alt="Flowers in the dark, 3.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral8.jpg" onclick="onClickLightbox(this)" alt="Flowers in the dark, 4.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral1.jpg" onclick="onClickLightbox(this)" alt="Flowers in the light, 1.">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/paintings_oil/floral3.jpg" onclick="onClickLightbox(this)" alt="Flowers in the light, 3.">
+          </div>
+        </div>
+        <div class="w3-row-padding w3-center w3-section">
+          <button class="w3-btn w3-dark-grey w3-padding-xlarge" id="gallery_button" onclick="closeModal('modal08')" style="margin-top:64px">CLOSE GALLERY</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Modals 9: Design-->
+  <div id="modal09" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal09')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">DESIGN</h3>
+      <p class="w3-center">
+        <em>
+          Assorted posters.<br>
+          Click image to expand.
+        </em>
+      </p> 
+
+      <div class="w3-center w3-row">
+        <div class="w3-row w3-gallery" style="margin-bottom:128px">
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/01.jpg" onclick="onClickLightbox(this)" alt="Event poster for local clothing store.">    
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/03.jpg" onclick="onClickLightbox(this)" alt="'Hug will find way' illustrated version.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/07.jpg" onclick="onClickLightbox(this)" alt="'Holy Week' poster version 1.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_copybot/04.jpg" onclick="onClickLightbox(this)" alt="Pedestal construction poster, for the Yale Social Robotics Lab.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/12.jpg" onclick="onClickLightbox(this)" alt="Event poster for local clothing store.">  
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/02.jpg" onclick="onClickLightbox(this)" alt="'Hug will find way' graphic poster.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/05.jpg" onclick="onClickLightbox(this)" alt="Event poster for local boutique.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/09.jpg" onclick="onClickLightbox(this)" alt="Jazz festival event poster.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/08.jpg" onclick="onClickLightbox(this)" alt="'Holy Week' poster version 2.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_copybot/05.jpg" onclick="onClickLightbox(this)" alt="Pedestal height comparison poster, for the Yale Social Robotics Lab.">  
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/04.jpg" onclick="onClickLightbox(this)" alt="Bookstore event poster">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/06.jpg" onclick="onClickLightbox(this)" alt="Event poster for local jeweler.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/10.jpg" onclick="onClickLightbox(this)" alt="'Helvetica' movie screening poster.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_posters/11.jpg" onclick="onClickLightbox(this)" alt="Event poster for eating competition.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/design_copybot/06.jpg" onclick="onClickLightbox(this)" alt="Wall construction poster, for the Yale Social Robotics Lab.">  
+            
+          </div>
+        </div>
+        <div class="w3-row-padding w3-center w3-section">
+          <button class="w3-btn w3-dark-grey w3-padding-xlarge" id="gallery_button" onclick="closeModal('modal09')" style="margin-top:64px">CLOSE GALLERY</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Modals 10: Photography -->
+  <div id="modal10" class="w3-modal w3-bg-alpha-90">
+    <div class="w3-content w3-container w3-padding-bottom-64 w3-opacity-off">
+      <span class="w3-closebtn w3-text-black w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" onclick="closeModal('modal10')"><i class="fa fa-remove"></i></span>
+      <h3 class="w3-center">PHOTOGRAPHY</h3>
+      <p class="w3-center">
+        <em>
+          Assorted photographs.<br>
+          Click image to expand.
+        </em>
+      </p> 
+
+      <div class="w3-center w3-row">
+        <div class="w3-row w3-gallery" style="margin-bottom:128px">
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/01.jpg" onclick="onClickLightbox(this)" alt="In the library.">    
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/04.jpg" onclick="onClickLightbox(this)" alt="Hideaway bike.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/07.jpg" onclick="onClickLightbox(this)" alt="Modern vanitas 1, inspired by Laura Letinsky's still life photos.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/10.jpg" onclick="onClickLightbox(this)" alt="Mondrian deconstructed, 1."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/13.jpg" onclick="onClickLightbox(this)" alt="Sculptural lines, 2."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/16.jpg" onclick="onClickLightbox(this)" alt="One man's trash is another man's treasure.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/19.jpg" onclick="onClickLightbox(this)" alt="Kitchen findings, 2.">    
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/02.jpg" onclick="onClickLightbox(this)" alt="Sky in a mirror.">   
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/05.jpg" onclick="onClickLightbox(this)" alt="In a basket.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/08.jpg" onclick="onClickLightbox(this)" alt="Paper tunnels."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/11.jpg" onclick="onClickLightbox(this)" alt="Mondrian deconstructed, 2."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/14.jpg" onclick="onClickLightbox(this)" alt="Modern vanitas 2, inspired by Laura Letinsky's still life photos.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/17.jpg" onclick="onClickLightbox(this)" alt="Spoons spooning.">    
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/20.jpg" onclick="onClickLightbox(this)" alt="Kitchen findings, 3.">    
+
+          </div>
+
+          <div class="w3-third">
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/03.jpg" onclick="onClickLightbox(this)" alt="Collision in a window.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/06.jpg" onclick="onClickLightbox(this)" alt="Through my eyes.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/09.jpg" onclick="onClickLightbox(this)" alt="On the edge."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/12.jpg" onclick="onClickLightbox(this)" alt="Sculptural lines, 1."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/15.jpg" onclick="onClickLightbox(this)" alt="Modern vanitas 3, inspired by Laura Letinsky's still life photos.">  
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/18.jpg" onclick="onClickLightbox(this)" alt="Kitchen findings, 1."> 
+            <img class= "w3-gallery-image w3-image w3-hover-opacity w3-padding-tiny" src="files/projects/photography/21.jpg" onclick="onClickLightbox(this)" alt="Small and dark.">       
+          </div>
+        </div>
+        <div class="w3-row-padding w3-center w3-section">
+          <button class="w3-btn w3-dark-grey w3-padding-xlarge" id="gallery_button" onclick="closeModal('modal10')" style="margin-top:64px">CLOSE GALLERY</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Modal Lightbox for single image -->
+  <div id="modal_lightbox" class="w3-modal w3-black" onclick="closeModalLightbox()">
+    <!-- <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image" ><i class="fa fa-remove"></i></span> -->
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-bottom-64">
+      <p class="w3-opacity w3-small"><em> Click anywhere to close image. </em> </p>
+      <img id="modal_lightbox_img" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Fourth Parallax Image with Resume Text -->
+  <div class="bgimg-4 w3-display-container">
+    <div class="w3-display-middle">
+       <span class="w3-xxlarge w3-text-light-grey w3-wide">RESUME</span>
+    </div>
+  </div>
+
+  <!-- Container (Resume Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="resume">
+    <h3 class="w3-center">RESUME</h3>
+    <div class="w3-row-padding w3-center w3-section">
+    <a class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px" href="files/pdf/Resume2017.pdf" download>PDF VERSION</a>
+    </div>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <!-- Left Column -->
+      <div class="w3-third">
+        <!-- Splash box -->
+        <div class="w3-row w3-padding-large resume-border w3-margin w3-card-2">
+          <!-- Splash box for large, medium screen -->
+          <div class="w3-center w3-container w3-padding-medium w3-hide-small">
+            <img id="splashPiggy" src="files/icons/piggy_grey.svg"></img>
+            <div id="splashName">WENDY CHEN</div>
+            <div id="splashTagLine" class="w3-hide-medium">PICTURES & CODE</div>
+          </div>
+          <!-- Splash box for small screen -->
+          <div class="w3-center w3-container w3-hide-medium w3-hide-large">
+             <span class="w3-center w3-xlarge w3-wide"><h2>WENDY CHEN</h2></span>
+          </div>
+        </div>
+        <!-- Contact box -->
+        <div class="w3-row w3-padding-medium resume-border w3-margin w3-card-2">
+            <h2 class="w3-text-grey w3-padding-16"><img style="width:65px" src="files/icons/piggy_sunglasses_pink.svg"></img>&nbsp Contact</h2>
+            <div class="w3-container">
+              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-pink"></i>Developer & Artist</p>
+              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-pink"></i>wendy.w.chen@yale.edu</p>
+              <p><i class="fa fa-github-alt fa-fw w3-margin-right w3-large w3-text-pink"></i><a class="w3-hover-pink" href="https://github.com/vverovvero">vverovvero</a></p>
+              <hr>
+            </div>
+        </div>
+        <!-- Skills box -->
+        <div class="w3-row w3-padding-medium resume-border w3-margin w3-card-2">
+          <h2 class="w3-text-grey w3-padding-16"><img style="width:55px" src="files/icons/piggy_bowtie_pink.svg"></img>&nbsp Skills</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Languages</b></h5>
+            <p>
+            C/C++, HTML, CSS, JavaScript, Python
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software</b></h5>
+            <p>
+            Maya, Blender, Unity, Photoshop, Illustrator, InDesign
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+        <!-- Education box -->
+        <div class="w3-row w3-padding-medium resume-border w3-margin w3-card-2">
+          <h2 class="w3-text-grey w3-padding-16"><img style="width:60px" src="files/icons/piggy_cowboy_pink.svg"></img>&nbsp Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Yale University</b></h5>
+            <h6 class="w3-text-pink"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>B.S. Computer Science
+            <br><i class="fa fa-fw fa-calendar w3-margin-right"></i>August 2013 - <span class="w3-tag w3-pink w3-round">Current</span></h6>
+            <p>
+            Expected graduation May 2017. 3.72 GPA. Pursuing studies in computer graphics and visual arts. <!-- Completed courses in systems programming, parallel programming, operating systems, distributed systems, data structures, algorithms, computer graphics, 3D fabrication, discrete mathematics, linear algerbra, animation, painting, photography, graphic design, drawing. -->
+            </p>
+          </div>
+        </div>
+        <!-- Experience box -->
+        <div class="w3-row w3-padding-medium resume-border w3-margin w3-card-2">
+          <h2 class="w3-text-grey w3-padding-16"><img style="width:70px" src="files/icons/piggy_mickey_pink.svg"></img>&nbsp Experience</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Blue Sky Studios</b></h5>
+            <h6 class="w3-text-pink"><i class="fa fa-user-o fa-fw w3-margin-right"></i>Production Engineering Intern
+            <br><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2016 - August 2016</h6>
+            <p>
+            Developed features for production tools, including web applications, proprietary tool packages, and Maya plug-in for geometry reduction. <!-- Wrote a web application using Django framework for bookmarkable searches through all studio users. Developed a tool package for copying shots for archiving and performance testing. Developed a suite of Maya plug-ins for geometry reduction when converting high-poly 3D models into layout sets. -->
+            Geometry reduction tool deployed in studio as of Fall 2016.
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Yale University</b></h5>
+            <h6 class="w3-text-pink"><i class="fa fa-user-o fa-fw w3-margin-right"></i>Teaching Assistant
+            <br><i class="fa fa-calendar fa-fw w3-margin-right"></i>Spring 2015, <span class="w3-tag w3-pink w3-round">Current</span></h6>
+            <p>
+            Previously TA for Julie Dorsey’s computer graphics freshman seminar, Spring 2016.
+            Currently TA for Julie Dorsey’s seminar, Andrew Sherman’s parallel programming class, Spring 2017.
+            </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Walt Disney Animation Studios</b></h5>
+            <h6 class="w3-text-pink"><i class="fa fa-user-o fa-fw w3-margin-right"></i>Art & Production Intern
+            <br><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2015 - August 2015</h6>
+            <p>
+            Created short film “Brew” with team. Learned CG production pipeline, Maya and Disney’s proprietary tools. Animated shots, and textured main assets used in the film.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <img style="width:130px" src="files/icons/piggy_princess.svg"></img>
+    </div>
+  </footer>
+  </body>
+</html>
